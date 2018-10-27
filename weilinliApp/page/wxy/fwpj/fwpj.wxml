@@ -1,0 +1,33 @@
+<!--page/wxy/fwpj/fwpj.wxml-->
+<view class="lv_bj-colorfo box-pad">
+  <!-- 五星评分 -->
+  <view class="pingfen lv_bj-color">
+    <view>蔡奥蝶</view>
+    <view class="xingxing-flex">
+      <view>
+        <block wx:for="{{one_2}}" wx:key="index">
+        <image class="xing-lmage" catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='https://wechat.tenqent.com/WebImg/wll-img/xingxingh.png'></image>
+        </block>
+        <block wx:for="{{two_2}}" wx:key="index">
+        <image class="xing-lmage" catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='https://wechat.tenqent.com/WebImg/wll-img/xingxinghui.png'></image>
+        </block>
+      </view>
+    </view>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <textarea class="lv_bj-color" placeholder="请输入评价内容"></textarea>
+    <view class="lv_bj-color">
+      <view class="wlbc-pad">
+      上传图片
+      </view>
+      <view class="">
+          <view class="lv__inputstyle-box">
+            <view class="lv__input-box">
+              <input class="lv__input" type="file"></input>
+            </view>
+          </view>
+      </view>
+    </view>
+    <button class="wlbc_btn" form-type="submit">提交</button>
+  </form>
+</view>

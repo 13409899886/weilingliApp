@@ -1,0 +1,109 @@
+<!--pages/wycy/wycy.wxml-->
+<view>
+  <view class="Navigation">
+    <view class="wycy_l">
+      <view class="weizhili wzl_size wzl_rmg">
+        微治理
+        <view class="number wzl_size">23</view>
+        条
+      </view>
+      <view class="weizhili wzl_size">
+        微心愿
+        <view class="number wzl_size">19</view>
+        条
+      </view>
+    </view>
+    <navigator class="wycy_r wzl_size" url="../../wxy/personal_center/personal_center">个人中心</navigator>
+  </view>
+
+  <!-- banner图 -->
+  <view class="lv_banner" style="background: url(https://wechat.tenqent.com/WebImg/wll-img/ba.jpg)no-repeat center center;background-size: cover"></view>
+
+  <!-- 微心愿 -->
+  <view class="Navigation navigettion_pad">
+    <view class="wycy_l">
+      <view class="weizhili wycy_wxy">
+       <view class="wxy_bimg" style="{{url}}wei.png{{cover}}"></view>
+        微心愿
+      </view>
+    </view>
+    <button class="wxy_btn wxy-dy">订阅</button>
+    <button class="wycy_btn" type="primary" >发布</button>
+  </view>
+
+  <!-- 微心愿列表 -->
+  <view class="scroll_view-box">
+    <scroll-view style="height:405rpx" class="lv_white-space_nowrap" scroll-x="true" > 
+        <view class="lv_display-inline_block">
+          <navigator>
+            <view class="lv_wxbj" style="{{url}}zhaop.jpg{{cover}}">
+                <view class="bj-text">阅读</view>
+              </view>
+              <view class="wycy-title">tetles</view>
+              <view class="wycy-text">社区3单元6栋开启向山区儿童捐书活动希望居民们都来参加活动</view>
+          </navigator>
+        </view>
+      <view class="lv_display-inline_block">
+       <navigator url="">
+         <view class="lv_wxbj" style="{{url}}zhaop.jpg{{cover}}">
+            <view class="bj-text">社区帮扶</view>
+          </view>
+          <view class="wycy-title">tetles</view>
+          <view class="wycy-text">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</view>
+       </navigator>
+      </view> 
+      <view class="lv_display-inline_block">
+        <navigator>
+          <view class="lv_wxbj" style="{{url}}zhaop.jpg{{cover}}">
+              <view class="bj-text">关爱老人</view>
+            </view>
+            <view class="wycy-title">tetles</view>
+            <view class="wycy-text">11111111111111111111111111111111111111111111111111111111111111111111</view>
+        </navigator>
+      </view> 
+      <view class="lv_display-inline_block">
+       <navigator>
+         <view class="lv_wxbj" style="{{url}}zhaop.jpg{{cover}}">
+            <view class="bj-text">社区</view>
+          </view>
+          <view class="wycy-title">tetles</view>
+          <view class="wycy-text">11</view>
+       </navigator>
+      </view> 
+    </scroll-view> 
+  </view>
+  <!-- 微治理 -->
+  <view class="Navigation navigettion_pad">
+    <view class="wycy_l">
+      <view class="weizhili wycy_wxy">
+      <view class="wxy_bimg wxy_bimgb"style="{{url}}wend.png{{cover}}"></view>
+        微治理
+      </view>
+      
+    </view>
+    <button class="wxy_btn wzl-dy" >订阅</button>
+    <button class="wycy_btn" type="primary" >发布</button>
+  </view>
+  <view class="Navigation wzl_text">
+    <view class="wycy_l">
+      <view class="weizhili">
+        电梯抽烟
+      </view>
+    </view>
+  </view>
+  <view class="Navigation wzl_text">
+    <view class="wycy_l">
+      <view class="weizhili">
+        社区帮扶
+      </view>
+    </view>
+  </view>
+  <view class="Navigation wzl_text">
+    <view class="wycy_l">
+      <view class="weizhiliy">
+        社区帮扶
+      </view>
+    </view>
+  </view>
+  <view class="lv_border_top wycy-gd">更多>></view>
+</view>

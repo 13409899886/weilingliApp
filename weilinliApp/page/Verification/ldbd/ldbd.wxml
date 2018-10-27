@@ -1,0 +1,10 @@
+<!--pages/ldbd/ldbd.wxml-->
+<view class="ldbd-box">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="lv_sections lv_border_top lv_border_bottom">
+      <text class="lv_texts wgybd_text">姓名</text>
+      <input class="lv_inputs" placeholder="请填写你您的真实姓名" />    
+    </view>
+    <button class="wgybd_btn"bindtap="setPlain" form-type="submit">确认</button>
+  </form>
+</view>

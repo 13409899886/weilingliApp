@@ -1,0 +1,26 @@
+<!--page/shce/aytj/aytj.wxml-->
+<view>
+  <view class="swiper-tab lv_border_top">
+    <view bindtap="bindViewTap" class="lv_border_bottom  wysh-size swiper-tab-item ">
+      <view class="wysh-size  {{currentTab==0?'active':''}}">案源提交</view>
+    </view>
+    <view class="wysh-size swiper-tab-item ">
+      <view class="wysh-size  {{currentTab==1?'active':''}}">线索征集</view>
+    </view>
+  </view>
+  <view class="lv-bordertop aytj-text">
+    <view class="bs-title"> 涉黑事件</view>
+    <view class="ayti-text-flex" bindtap="bindViewTapb">
+      <view class="text-width">涉黑事件涉黑事件涉黑事件涉黑事件涉黑事件涉黑事件涉黑事件</view>
+      <view>2018-04-12</view>
+    </view>
+    <view class="ayti-text-flex" bindtap="bindViewTapb">
+      <view class="text-width">涉黑事件涉黑事件涉黑事件涉黑事件涉黑事件涉黑事件涉黑事件</view>
+      <view>2018-04-12</view>
+    </view>
+    <view class="ayti-text-flex" bindtap="bindViewTapb">
+      <view class="text-width">涉黑事件涉黑事件涉黑事件涉黑事件涉黑事件涉黑事件涉黑事件</view>
+      <view>2018-04-12</view>
+    </view>
+  </view>
+</view>

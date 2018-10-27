@@ -1,0 +1,91 @@
+
+<view class='content' wx:if="{{info}}">
+  <view class='userList'>
+    <view class='obj' 
+    wx:for="{{info.users}}" 
+    wx-if="{{item.wgbm==wgbm||wgbm==''}}" 
+    bindtap='toMsg' 
+    data-to_uid="{{item.openid}}"
+    data-title="{{item.name}}"
+    data-is_siliao="{{item.is_siliao}}">
+      <view class='picture' style='background-image:url("{{item.avatar}}")'>
+      <text class="iconfont icon-tool-dangqibiaozhi-copy" wx:if="{{item.zhengzhimianmao==1}}"></text>
+        <view class='text'>{{item.title}}</view>
+      </view>
+      <view class='userName'>{{item.name}}</view>
+    </view>
+    
+    <view class='obj lookMore' bindtap="look_wgcy">
+      <view class='picture'  >
+        查看网格成员
+      </view>
+    </view>
+    <view class='obj lookMore' bindtap="look_sqcy">
+      <view class='picture'  >
+        查看社区成员
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-panel">
+      <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+              <view class="weui-cells">
+                  <view class="weui-cell weui-cell_access" href="javascript:;">
+                      <view class="weui-cell__hd"></view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          <p>群聊名称</p>
+                      </view>
+                      <text class="weui-cell__ft">{{info.wg_name}}</text>
+                  </view>
+
+                  <view class="weui-cell weui-cell_access" href="javascript:;">
+                      <view class="weui-cell__hd"></view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          <p>群二维码</p>
+                      </view>
+                      <text class="weui-cell__ft"></text>
+                  </view>
+                  
+                  <view class="weui-cell weui-cell_access notice" href="javascript:;">
+                      <view class="weui-cell__hd"></view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          <view>群公告</view>
+                          <view class='noticeDetail'>{{info.gonggao.content}}</view>
+                      </view>
+                      
+                  </view>
+
+                  
+              </view>
+          </view>
+      </view>
+  </view>
+  <view class="weui-panel">
+      <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+              <view class="weui-cells">
+                  
+                  <view class="weui-cell weui-cell_access" href="javascript:;">
+                      <view class="weui-cell__hd"></view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          <p>不接受居民单聊</p>
+                      </view>
+                      <view class="body-view">
+                        <switch checked="{{info.is_siliao}}" bindchange="switch1Change"/>
+                      </view>
+                  </view>
+
+                  <view class="weui-cell weui-cell_access" href="javascript:;">
+                      <view class="weui-cell__hd"></view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          <p>我在本群昵称</p>
+                      </view>
+                      <text class="weui-cell__ft">{{info.user_name}}</text>
+                  </view>
+                  
+              </view>
+          </view>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+<!--page/wzl/bcAuditor/bcAuditor.wxml-->
+<view>
+   <view class="lv-ul">
+    <view class="lv-btn-flex">
+      <view class="bs-title">社区帮扶</view>
+    </view>
+    <view>诉求人：xxx</view>
+    <view >报事内容：</view>
+    <view class="lv_text-indent">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+  </view>
+  <view class="lv-ul">
+    <view>事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+  </view>
+  <!-- 进度条 -->
+  <view class="process-box">
+    <view class='order_process'>
+      <view class='process_wrap' wx:for="{{processData}}" wx:key="">
+        <view class='process'>
+          <view class='process_line' ></view>
+          <image class='process_icon' src="{{item.icon}}"></image>
+          <view class='process_line' ></view>
+        </view>
+        <text class='process_name'>{{item.name}}</text>
+        <text class='process_name'>{{item.year}}</text>
+        <text class='process_name'>{{item.tiem}}</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+     <view class="radio-box">
+      <radio-group name="radio-group">
+        <view class="smrq-radio">
+          <view>
+            <view>
+              <label  class="radio-right"><radio value="radio1"/>审核通过</label>
+              <label bindtap="noticeTap " bindtap="onChangeShowState"><radio value="radio1"/>审核不通过</label>
+            </view>
+          </view>
+        </view>
+      </radio-group>
+    </view>
+    <view class="bcAuditor-textatea lv_bj-colorfo hide{{showView?'':'show'}}">
+      <textarea placeholder='填写不通过原因'></textarea>
+    </view>
+    <button class="bcAuditor_btn" form-type="submit">确认</button>
+  </form>
+  </view>
+</view>

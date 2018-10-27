@@ -1,0 +1,45 @@
+<!--page/Verification/smrq/smrq.wxml-->
+<view class="smrq">
+  <view>
+     <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="radio-box">
+        <view class="lv_sections lv_border_top lv_border_bottom">
+          <text class="lv_texts wgybd_text">姓名</text>
+          <input class="lv_inputs" placeholder="请输入您的真实姓名" />    
+        </view>
+        <view class="lv_sections lv_border_bottom">
+          <text class="lv_texts wgybd_text">手机号</text>
+          <input class="lv_inputs" type="digit" placeholder="请填写您的手机号" />    
+        </view>
+        <view class="lv_sections lv_border_bottom">
+        <text class="lv_texts smrq-text">身份</text>
+        <view>
+          <radio-group name="radio-group">
+            <view class="smrq-radio">
+              <view>
+                <view class="radio-right">
+                  <label><radio value="radio1"/>业主</label>
+                </view>
+              </view>
+              <view>
+                <view class="radio-right">
+                  <label><radio value="radio1"/>租户</label>
+                </view>
+              </view>
+               <view>
+                <view class="radio-right">
+                  <label><radio value="radio1"/>其他</label>
+                </view>
+              </view>
+            </view>
+          </radio-group>
+        </view>
+      </view>
+      <button class="wgybd_btn"bindtap="setPlain" form-type="submit">确认</button>
+      </view>
+     </form>
+     <view class="smrq-box">
+      <view class="smrq-bj" style="background: url(https://wechat.tenqent.com/WebImg/wll-img/wll.jpg)no-repeat center center;background-size: cover"></view>
+     </view>
+  </view>
+</view>

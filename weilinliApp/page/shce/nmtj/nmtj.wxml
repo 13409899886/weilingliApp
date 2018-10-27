@@ -1,0 +1,23 @@
+<!--page/shce/nmtj/nmti.wxml-->
+<view class="swiper-tab lv_border_top">
+  <view bindtap="bindViewTap" class="lv_border_bottom  wysh-size swiper-tab-item ">
+    <view class="wysh-size  {{currentTab==0?'active':''}}">案源提交</view>
+  </view>
+  <view  bindtap="bindViewTapb" class="wysh-size swiper-tab-item ">
+    <view class="wysh-size  {{currentTab==1?'active':''}}">线索征集</view>
+  </view>
+</view>
+<view class="aytj-text lv_bj-colorfo">
+  <view class="border-radius lv_bj-color">
+    <view class="bs-title">涉黑title</view>
+    <view>这是一个这是一个这是一个这是一个这是一个这是一个这是一个这是一个这是一个这是一个这是一个这是一个</view>
+    <view class="sizi-color">希望广大群众踊跃提供线索</view>
+  </view>
+  <form  bindsubmit="formSubmit" bindreset="formReset">
+    <view class="lv_bj-color nmtj-textarea">
+      <textarea placeholder='请输入您的线索'></textarea>
+      <view class="flex-r">0/200</view>
+    </view>
+    <button class="bcAuditor_btn" form-type="submit">确认</button>
+  </form>
+</view>

@@ -1,0 +1,50 @@
+<!--pages/Wgybd/Wgybd.wxml-->
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="lv_sections lv_border_bottom">
+      <text class="lv_texts wgybd_text">手机号</text>
+      <input class="lv_inputs" type="digit" placeholder="请填写您的手机号" />    
+    </view>
+    <view class="section lv_border_bottom">
+      <text class="lv_texts wgybd_text">区</text>
+      <picker class="lv_pickers"bindchange="bindPickerChange_d" value="{{index_d}}" range="{{array_d}}">
+        <view class="picker">
+          {{array_d[index_d]}}
+        </view>
+      </picker>
+      <jiantou class="lv_jiantou"></jiantou>
+    </view>
+    <view class="section lv_border_bottom">
+      <text class="lv_texts wgybd_text">选择街道</text>
+      <picker class="lv_pickers"bindchange="bindPickerChange_c" value="{{index_c}}" range="{{array_c}}">
+        <view class="picker">
+          {{array_c[index_c]}}
+        </view>
+      </picker>
+      <jiantou class="lv_jiantou"></jiantou>
+    </view>
+    <view class="section lv_border_bottom">
+      <text class="lv_texts wgybd_text">社区名称</text>
+      <picker class="lv_pickers" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+        </view>
+      </picker>
+      <jiantou class="lv_jiantou"></jiantou>
+    </view>
+    <view class="section lv_border_bottom">
+      <text class="lv_texts wgybd_text">网格名称</text>
+      <picker class="lv_pickers" bindchange="bindPickerChange_b" value="{{index_b}}" range="{{array_b}}">
+        <view class="picker">
+          {{array_b[index_b]}}
+        </view>
+      </picker>
+      <jiantou class="lv_jiantou"></jiantou>
+    </view>
+    <view class="section lv_border_bottom">
+      <text class="lv_texts wgybd_text">负责区域</text>
+      <input class="lv_inputs" placeholder="请填写您的区域" /> 
+    </view>
+    <button class="wgybd_btn"bindtap="setPlain" form-type="submit">确认</button>
+  </form>
+

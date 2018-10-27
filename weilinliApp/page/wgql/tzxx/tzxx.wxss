@@ -1,0 +1,51 @@
+/* pages/tzxx/tzxx.wxss */
+/* tab选项切换 */
+.swiper-tab{
+    width: 100%;
+    text-align: center;
+    height: 70rpx;
+    line-height: 70rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.swiper-tab-item{
+    width: 30%; 
+    color:#474747;
+}
+.active{
+    color:#474747;
+    background: #D6D6D8;
+}
+/* 列表 */
+.lv-tzxx-flex-box{
+  position: relative;
+  float:left;
+  padding:30rpx 30rpx
+}
+.lv_ulbj_r{
+  height: 160rpx;
+  width: 220rpx
+}
+.lv-lefts{
+  float: left
+}
+.lv-left-text{
+  width: 454rpx;
+  color: #000;
+  padding-right: 16rpx;
+  font-size: 36rpx
+}
+.left-text-time{
+  width: 474rpx;
+  position: absolute;
+  bottom: 22rpx
+}
+.lv-ridhts{
+  float: right
+}
+.lv_border_bottom{
+  position: relative;
+  border-right: 2rpx solid #d9d9d9;
+
+}

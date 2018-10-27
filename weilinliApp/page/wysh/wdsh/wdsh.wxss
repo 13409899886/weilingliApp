@@ -1,0 +1,5 @@
+/* page/wysh/wdsh/wdsh.wxss */
+/* 我的说事 */
+.active{
+  color:#04BE01
+}

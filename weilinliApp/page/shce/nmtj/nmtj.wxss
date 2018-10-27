@@ -1,0 +1,40 @@
+/* page/shce/nmtj/nmti.wxss */
+.active{
+  color:#04BE01
+}
+.aytj-text{
+  height: 90vh;
+}
+.border-radius{
+  padding: 20rpx;
+}
+.bs-title{
+  font-weight: 900;
+  font-size: 36rpx;
+}
+.aytj-text{
+  padding: 20rpx 30rpx;
+  line-height: 1.5;
+}
+.sizi-color{
+  color: #04BE01;
+  margin-top: 30rpx
+}
+.flex-r{
+  text-align: right
+}
+.nmtj-textarea{
+  padding: 30rpx;
+  border-top:20rpx solid #f0f0f0;
+}
+.bcAuditor_btn{
+  margin:aotu;
+  margin-top: 200rpx;
+  margin-bottom: 50rpx; 
+  line-height: 1;
+  padding: 32rpx 0;
+  font-size: 30rpx;
+  width: 660rpx;
+  color:#fff;
+  background-image:-webkit-linear-gradient(top,rgb(81,231,118),rgb(57,195,79))
+}

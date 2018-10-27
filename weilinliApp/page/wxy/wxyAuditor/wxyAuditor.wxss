@@ -1,0 +1,43 @@
+/* page/wxy/wxyAuditor/wxyAuditor.wxss */
+.bs-title{
+  font-weight: 900;
+  font-size: 36rpx
+}
+.from-box{
+  padding: 30rpx
+}
+.process-box{
+  padding: 60rpx 0 60rpx 0
+}
+.radio-box{
+  display: -webkit-flex;
+  justify-content: center
+}
+.radio-right{
+  margin-right: 80rpx
+}
+.bcAuditor-textatea{
+  margin: 60rpx 30rpx;
+  border-radius: 10rpx
+}
+textarea{
+  padding: 30rpx
+}
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
+/* 按钮样式 */
+.bcAuditor_btn{
+  margin:aotu;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx; 
+  line-height: 1;
+  padding: 32rpx 0;
+  font-size: 30rpx;
+  width: 660rpx;
+  color:#fff;
+  background-image:-webkit-linear-gradient(top,rgb(81,231,118),rgb(57,195,79))
+}

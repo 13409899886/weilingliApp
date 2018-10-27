@@ -1,0 +1,7 @@
+/* page/wysh/wdshDatalis/wdshDetails.wxss */
+.active{
+  color:#04BE01
+}
+.pingfen{
+  border-bottom: 80rpx solid #f0f0f0
+}

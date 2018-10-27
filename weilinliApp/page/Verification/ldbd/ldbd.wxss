@@ -1,0 +1,9 @@
+/* pages/ldbd/ldbd.wxss */
+.ldbd-box{padding: 20rpx}
+.wgybd_btn{
+  position: absolute;
+  bottom: 300rpx;
+  width:710rpx;
+  color:#fff;
+  background-image:-webkit-linear-gradient(top,rgb(81,231,118),rgb(57,195,79))
+}

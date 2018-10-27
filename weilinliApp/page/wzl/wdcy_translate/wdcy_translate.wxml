@@ -1,0 +1,57 @@
+<!--page/wzl/wdcy_translate/wlbc_translate.wxml-->
+<view>
+  <view class="swiper-tab lv_border_top">
+    <view class="lv_border_bottom  wysh-size swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">处理中</view>
+    <view class="lv_border_bottom  wysh-size swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">已完成</view>
+  </view>
+  <swiper style="height:1302rpx;" current="{{currentTab}}" duration="300"  bindchange="swiperTab">
+    <swiper-item style="overflow:auto">
+      <view>
+        <view class="wdcy-ul-box lv_border_bottom">
+          <view class="wdcy-btnflex">
+            <view class="ul-box">
+              <view class="wdcy-ultitle">华莱士炸鸡店油烟扰民</view>
+              <view class="li-line">华莱士炸鸡店油烟扰民华莱士炸鸡店油烟扰民华莱士炸鸡店油烟扰民</view>
+            </view>
+            <view class="lv_jiantou"></view>
+          </view>
+          <view class="wdcy-btnflex btn-pam">
+            <button class="wdcy-btn">处理中</button>
+            <view>2018-04-02 10:12:12</view>
+          </view>
+        </view>
+        <view class="wdcy-ul-box lv_border_bottom">
+          <view class="wdcy-btnflex">
+            <view class="ul-box">
+              <view class="wdcy-ultitle">华莱士炸鸡店油烟扰民</view>
+              <view class="li-line">华莱士炸鸡店油烟扰民华莱士炸鸡店油烟扰民华莱士炸鸡店油烟扰民</view>
+            </view>
+            <view class="lv_jiantou"></view>
+          </view>
+          <view class="wdcy-btnflex btn-pam">
+            <button class="wdcy-btn">处理中</button>
+            <view>2018-04-02 10:12:12</view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <!-- 已完成 -->
+    <swiper-item style="overflow:auto">
+      <view>
+        <view class="wdcy-ul-box lv_border_bottom">
+          <view class="wdcy-btnflex">
+            <view class="ul-box">
+              <view class="wdcy-ultitle">华莱士炸鸡店油烟扰民</view>
+              <view class="li-line">华莱士炸鸡店油烟扰民华莱士炸鸡店油烟扰民华莱士炸鸡店油烟扰民</view>
+            </view>
+            <view class="lv_jiantou"></view>
+          </view>
+          <view class="wdcy-btnflex btn-pam">
+            <button class="wdcy-btn">处理中</button>
+            <view>2018-04-02 10:12:12</view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

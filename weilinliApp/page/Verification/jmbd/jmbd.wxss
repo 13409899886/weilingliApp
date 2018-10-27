@@ -1,0 +1,11 @@
+/* pages/Wll/wll.wxss */
+.box{padding: 10px}
+/* 背景图 */
+.img-bja{
+  background: url(https://ps.ssl.qhmsg.com/bdr/200_200_/t010792e31e5ecaabc9.jpg)no-repeat center center;
+  background-size: cover;
+}
+.img-bjb{
+  background: url(https://ps.ssl.qhmsg.com/bdr/200_200_/t010792e31e5ecaabc9.jpg)no-repeat center center;
+  background-size: cover;
+}

@@ -1,0 +1,32 @@
+<!--page/wxy/wxyAuditor/wxyAuditor.wxml-->
+<view>
+  <view class="lv-ul">
+    <view class="lv-btn-flex">
+      <view class="bs-title">青少年服务</view>
+    </view>
+    <view>发布时间：2018-05-06</view>
+    <view>诉求人：xxx</view>
+    <view >联系电话：xxxxxxxxxxx</view>
+    <view>微心愿内容：武汉市武昌区复兴路26号武汉市武昌区复兴路26号武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+  </view>
+  <view class="from-box">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+     <view class="radio-box">
+      <radio-group name="radio-group">
+        <view class="smrq-radio">
+          <view>
+            <view>
+              <label class="radio-right"><radio value="radio1"/>审核通过</label>
+              <label bindtap="noticeTap " bindtap="onChangeShowState"><radio value="radio1"/>审核不通过</label>
+            </view>
+          </view>
+        </view>
+      </radio-group>
+    </view>
+    <view class="bcAuditor-textatea lv_bj-colorfo hide{{showView?'':'show'}}">
+      <textarea placeholder='填写不通过原因'></textarea>
+    </view>
+    <button class="bcAuditor_btn" form-type="submit">确认</button>
+  </form>
+  </view>
+</view>

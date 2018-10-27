@@ -1,0 +1,113 @@
+<!--page/wgql-wgysz/wgysz.wxml-->
+<view class="wgysz">
+  <view class="cancel">
+    <text>取消</text>
+    <text>保存</text>
+  </view>
+  <view class="wgysz-bjcolor"></view>
+  <view class="wgyzs-form">
+    <view style="height:200rpx;width:200rpx;margin-bottom:40rpx;background: url(https://ps.ssl.qhmsg.com/bdr/200_200_/t010792e31e5ecaabc9.jpg)no-repeat center center;background-size: cover;"></view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="lv_sections lv_border_top lv_border_bottom">
+        <text class="lv_texts wgybd_text">姓名：</text>
+        <input class="lv_inputs" placeholder="请输入您的姓名" />    
+      </view>
+      <view class="lv_sections lv_border_bottom">
+        <text class="lv_texts wgybd_text">电话：</text>
+        <input class="lv_inputs" type="digit" maxlength="11" placeholder="请输入您的电话" />    
+      </view>
+      <view class="lv_sections lv_border_bottom">
+        <text class="lv_texts wgybd_text">身份证号码：</text>
+        <input class="lv_inputs" type="digit" placeholder="请输入您的电话" />    
+      </view>
+      <view class="lv_sections lv_border_bottom">
+        <text class="lv_texts wgybd_text">居住地址：</text>
+        <input class="lv_inputs" placeholder="请输入您的居住地址" />    
+      </view>
+      <view class="lv_sections lv_border_bottom">
+        <text class="lv_texts wgybd_text wgysz-top">状态：</text>
+        <view>
+          <radio-group name="radio-group">
+            <view class="wgysz-radio">
+              <view>
+                <view class="radio-btm">
+                  <label><radio value="radio1"/>未审核</label>
+                </view>
+                <view class="radio-btm">
+                  <label><radio value="radio2"/>观察者</label>
+                </view>  
+                <view>
+                  <label><radio value="radio1"/>审核不通过</label>
+                </view>
+              </view>
+              <view>
+                <view class="radio-btm">
+                  <label><radio value="radio1"/>正常</label>
+                </view>
+                <view class="radio-btm">
+                  <label><radio value="radio2"/>禁言</label>
+                </view>  
+              </view>
+            </view>
+          </radio-group>
+        </view>
+      </view>
+      <view class="lv_sections lv_border_bottom">
+        <text class="lv_texts wgybd_text wgysz-top">政治面貌：</text>
+        <view>
+          <radio-group name="radio-group">
+            <view class="wgysz-radio">
+              <view>
+                <view class="radio-btm">
+                  <label><radio value="radio1"/>群众</label>
+                </view>
+                <view class="radio-btm">
+                  <label><radio value="radio2"/>党员</label>
+                </view>  
+                <view>
+                  <label><radio value="radio1"/>其他</label>
+                </view>
+              </view>
+              <view>
+                <view class="radio-btm">
+                  <label><radio value="radio1"/>共青团员</label>
+                </view>
+                <view class="radio-btm">
+                  <label><radio value="radio2"/>民主党派</label>
+                </view>  
+              </view>
+            </view>
+          </radio-group>
+        </view>
+      </view>
+      <view class="lv_sections lv_border_bottom">
+        <text class="lv_texts wgybd_text">状态：</text>
+        <view>
+          <radio-group name="radio-group">
+            <view class="wgysz-radio">
+              <view>
+                <view class="radio-btm btm-cancel">
+                  <label><radio value="radio1"/>业主</label>
+                </view>
+              </view>
+              <view>
+                <view class="radio-btm btm-cancel">
+                  <label><radio value="radio1"/>租户</label>
+                </view>
+              </view>
+            </view>
+          </radio-group>
+        </view>
+      </view>
+      <view class="lv_sections">
+        <view>
+          <text class="lv_texts wgybd_text">状态：</text>
+        </view>
+        <view class="textarea-height">
+          <textarea class="wgysz_textareas" auto-height show-confirm-bar="" placeholder="请输入详情"/>
+        </view>
+      </view>
+      <button class="wgysz_btn"bindtap="setPlain" form-type="submit">删除</button>
+    </form>
+  </view>
+</view>

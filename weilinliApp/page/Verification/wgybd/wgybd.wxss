@@ -1,0 +1,20 @@
+/* pages/Wgybd/Wgybd.wxss */
+.box{padding: 20rpx}
+.wgybd_btn{
+  position: absolute;
+  bottom: 300rpx;
+  margin: 0 20rpx;
+  width: 710rpx;
+  color:#fff;
+  background-image:-webkit-linear-gradient(top,rgb(81,231,118),rgb(57,195,79))
+}
+.wgybd_text{
+  padding-left: 20rpx
+}
+.lv_jiantou_left{
+  border-width: 0 4rpx 4rpx 0;
+  left: 70rpx
+}
+.lv_jiantou{
+  border-width: 0 4rpx 4rpx 0;
+}

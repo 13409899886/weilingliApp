@@ -1,0 +1,24 @@
+/* page/wzl/bsDetails/bsDetails.wxss */
+.bs-title{
+  font-weight: 900;
+  font-size: 36rpx
+}
+.process-box{
+  padding: 60rpx 0 0 0
+}
+.bs-bangzhu{
+  padding: 0 30rpx
+}
+/* 按钮样式 */
+.ba-btn-flex{
+  display: -webkit-flex;
+  padding: 60rpx 30rpx
+}
+.wgybd_btn{
+  line-height: 1;
+  padding: 32rpx 0;
+  font-size: 30rpx;
+  width: 250rpx;
+  color:#fff;
+  background-image:-webkit-linear-gradient(top,rgb(81,231,118),rgb(57,195,79))
+}

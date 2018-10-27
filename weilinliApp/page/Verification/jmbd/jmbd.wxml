@@ -1,0 +1,65 @@
+<!--pages/Wll/wll.wxml-->
+<view class="box">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="lv_sections lv_border_top lv_border_bottom">
+      <text class="lv_texts">姓名</text>
+      <input class="lv_inputs" placeholder="请填写你您的真实姓名" />    
+    </view>
+    <view class="section lv_border_bottom">
+      <text class="lv_texts">选择区</text>
+      <picker class="lv_pickers"bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+        </view>
+      </picker>
+      <jiantou class="lv_jiantou"></jiantou>
+    </view>
+    <view class="section lv_border_bottom">
+      <text class="lv_texts">选择街道</text>
+      <picker class="lv_pickers"bindchange="bindPickerChange_b" value="{{index_b}}" range="{{array_b}}">
+        <view class="picker">
+          {{array_b[index_b]}}
+        </view>
+      </picker>
+      <jiantou class="lv_jiantou"></jiantou>
+    </view>
+    <view class="section lv_border_bottom">
+      <text class="lv_texts">社区</text>
+      <picker class="lv_pickers"bindchange="bindPickerChange_c" value="{{index_c}}" range="{{array_c}}">
+        <view class="picker">
+          {{array_c[index_c]}}
+        </view>
+      </picker>
+      <jiantou class="lv_jiantou"></jiantou>
+    </view>
+  </form>
+<view class="lv_box lv_border_bottom">
+  <view class="lv_uls">
+      <!-- 背景图 -->
+      <view class="lv_bj img-bja"></view>
+      <!-- 列表 -->
+     <navigator url="">
+       <view class="lv_lis">
+        <view class="lv_li">{{grid}}</view>
+        <view class="lv_li">电话：{{Telephone}}</view>
+        <view class="lv_nn">管理范围：{{text}}</view>
+       </view>
+     </navigator>
+    </view>
+  </view>
+  <view class="lv_box lv_border_bottom">
+    <view class="lv_uls">
+      <!-- 背景图 -->
+      <view class="lv_bj img-bjb"></view>
+      <!-- 列表 -->
+     <navigator url="">
+       <view class="lv_lis">
+        <view class="lv_li">{{grid}}</view>
+        <view class="lv_li">电话：{{Telephone}}</view>
+        <view class="lv_nn">管理范围：{{text}}</view>
+       </view>
+     </navigator>  
+    </view>
+  </view>
+</view>
+

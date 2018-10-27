@@ -1,0 +1,266 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box
+} 
+/***************** lv_public-style *****************/
+.lv_bj-color{
+  background: #fff
+}
+.lv_bj-colorfo{
+  background: #f0f0f0
+}
+
+/* banner图 */
+.lv_banner{
+  height: 320rpx;
+  width: 750rpx;
+}
+/* tab选项切换 */
+.swiper-tab{
+    width: 100%;
+    text-align: center;
+    height: 104rpx;
+    line-height: 100rpx;
+    display: -webkit-flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.swiper-tab-item{
+    width: 50%; 
+    color:#474747;
+}
+.swiper-tab{
+  position: relative;
+}
+.lv_border_bottom{
+  border-right: 2rpx solid #f0f0f0
+}
+.wysh-size{
+    font-size: 34rpx;
+}
+/********* 表单 *********/
+/* 字体颜色 */
+view{font-size: 30rpx;color: #474747;background: #f0f0f0}
+/* name宽度 */
+.lv_texts{
+  width: 250rpx;
+}
+/* 普通输入表单 */
+.lv_sections{
+  position:relative;
+  display: -webkit-flex;
+  padding:24rpx 0
+}
+.lv_inputs{
+  font-size: 30rpx;
+}
+/* 带箭头的表单 */
+.section{
+  position:relative;
+  display: -webkit-flex;
+  padding:24rpx 0
+}
+.picker{
+  color: #999;
+}
+.lv_pickers{
+  width: 410rpx;
+  color: #999;
+  font-size: 30rpx
+}
+
+/********* 箭头 *********/
+.lv_jiantou{
+  height: 16rpx;
+  width: 16rpx;
+  border-width: 4rpx 4rpx 0  0;
+  border-color: #999;
+  border-style: solid;
+  -webkit-transform: matrix(.71, .71, -.71, .71, 0, 0);
+  transform: matrix(.71, .71, -.71, .71, 0, 0);
+  position: relative;
+  top: 10rpx
+}
+
+/********* 生成边框线 *********/
+.lv_border_bottom::after, .lv_border_top::before{
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2rpx;
+  color: #d9d9d9
+}
+/* border_top */
+.lv_border_top::before{
+  top: 0;
+  border-top: 2rpx solid #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5)
+ }
+/* border_bottom */
+.lv_border_bottom::after{
+  bottom: 0;
+  border-bottom: 2rpx solid #d9d9d9;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5)
+}
+
+/********* 列表 *********/
+.lv_box{
+  overflow: hidden;
+  position: relative;
+  padding:30rpx 0
+}
+.lv_bj{
+  float: left;
+  height: 200rpx;
+  width: 200rpx;
+  margin-right: 20rpx
+}
+.lv_uls{
+  height: 100%;
+  width: 100%;
+  float: left;
+  color: #474747;
+  font-size: 30rpx;
+  line-height: 1.5;
+  position: relative
+}
+.lv_lis{
+  position: relative
+}
+.lv_li{
+ display: -webkit-box;
+ -webkit-line-clamp: 3;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ text-overflow: ellipsis
+}
+.lv_nn{
+ display: -webkit-box;
+ -webkit-line-clamp: 10;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ text-overflow: ellipsis
+}
+/* title首行间距 */
+.lv_text-indent{
+  text-indent:50rpx
+}
+/* top按钮列表 */
+.lv-bordertop{
+  border-top: 20rpx solid #f0f0f0;
+}
+.lv-ul{
+  padding: 30rpx;
+  border-bottom: 20rpx solid #f0f0f0;
+  line-height: 1.6
+}
+.lv-btn-flex{
+  display: -webkit-flex;
+  justify-content: space-between
+}
+.lv_btn{
+  height:50rpx;
+  font-size:30rpx;
+  padding:6rpx 16rpx;
+  margin:0;
+  line-height:1.4;
+  background: #007DCD;
+  color: #fff
+}
+.lv-line{
+  display: -webkit-box;
+ -webkit-line-clamp: 2;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ text-overflow: ellipsis
+}
+/* 图片添加样式 */
+.lv__input-box{
+  position: relative; 
+  width: 77px;
+  height: 77px;
+  border: 1px solid #d9d9d9;
+}
+.lv__input-box::before,.lv__input-box::after{
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background-color: #d9d9d9;
+}
+.lv__input-box:before {
+  width: 2px;
+  height: 39.5px;
+}
+.lv__input-box:after{
+  width: 39.5px;
+  height: 2px;
+}
+/* 进度条样式 */
+.order_process {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10rpx 30rpx 40rpx 30rpx
+}
+
+.process_wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  line-height: 1.8
+}
+
+.process {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.process_icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.process_line {
+  background: #1296db;
+  flex: 1;
+  height: 8rpx;
+}
+.process_name {
+  font-size: 24rpx;
+}
+/* 星星评分 */
+.xing-lmage{
+  height: 60rpx;
+  width: 60rpx;
+  display: inline-block;
+  margin-right: 20rpx
+}
+.pingfen{
+  padding: 30rpx;
+}
+.xingxing-flex{
+  display: -webkit-flex;
+  padding-left: 140rpx;
+  line-height: 2
+}
+.xing-textcolor{
+  color: #FFC000
+}
+/***************** lv_public-style-End *****************/

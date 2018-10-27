@@ -1,0 +1,42 @@
+{
+  "pages": [
+    
+    "page/Verification/loding/loding",
+    "page/wgql/wgql/wgql",
+    "page/wgql/groupCenter/groupCenter",
+    "page/wgql/notice/notice",
+    
+    "page/wgql/wxyAuditor/wxyAuditor",
+    "page/wxy/wycy/wycy",
+    "page/wxy/wxyAuditor/wxyAuditor",
+    "page/wxy/wdrl/wdrl",
+    "page/wxy/fwpj/fwpj",
+    "page/wxy/personal_center/personal_center",
+    "page/shce/aytj/aytj",
+    "page/shce/nmtj/nmtj",
+    "page/shce/xszj/xszj",
+    "page/wzl/wdcy_translate/wdcy_translate",
+    "page/wzl/Auditor/Auditor",
+    "page/wzl/wlbc/wlbc",
+    "page/wzl/bsDetails/bsDetails",
+    "page/wysh/wdshDetails/wdshDetails",
+    "page/wysh/wysh/wysh",
+    "page/wysh/wdsh/wdsh",
+    "page/wysh/wyshbug/wyshbug",
+    "page/Verification/clickjoin/clickjoin",
+    "page/Verification/wgybd/wgybd",
+    "page/Verification/ldbd/ldbd",
+    "page/Verification/jmbd/jmbd",
+    "page/wgql/tzxx/tzxx",
+    "page/wgql/wgysz/wgysz",
+    "page/Verification/authorization",
+    "page/Verification/smrq/smrq"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

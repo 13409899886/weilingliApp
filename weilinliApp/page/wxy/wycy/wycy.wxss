@@ -1,0 +1,146 @@
+/* pages/wycy/wycy.wxss */
+
+/* 微治理-个人中心 */
+.Navigation{
+  padding: 20rpx 30rpx;
+  display: -webkit-flex;
+  justify-content: space-between
+}
+.wycy_r{
+  padding: 0 8rpx;
+  border: 2rpx solid #ccc
+}
+.wycy_l{
+  display: -webkit-flex
+}
+.wzl_rmg{
+  margin-right: 40rpx
+}
+.weizhili{
+  display: -webkit-flex;
+}
+.wzl_size{
+  font-size: 26rpx
+}
+.number{
+  margin: 0 10rpx;
+  padding: 0 4rpx;
+  color: #FB604E;
+  border: 2rpx solid #ccc
+}
+
+/* 微心愿 */
+.navigettion_pad{
+  padding: 30rpx 30rpx;
+  align-items: center 
+}
+.wxy_bimg{
+  height: 60rpx;
+  width: 60rpx;
+  margin-right: 20rpx
+}
+.wxy_bimgb{
+  width: 50rpx;
+  margin-right: 20rpx
+}
+.wycy_wxy{
+  font-weight: 600;
+  color: #FB604E;
+  align-items:center;
+
+}
+.wxy_img{
+  height: 60rpx;
+  width: 60rpx
+}
+.wycy_btn,.wxy_btn{
+  height: 40rpx;
+  font-size: 30rpx; 
+  padding: 0 16rpx;
+  margin: 0;
+  line-height: 1.2
+}
+.wxy_btn{
+  border: 1px solid #1AAD19;
+  background: #fff;
+  color: #1AAD19;
+  margin-left: 20px
+}
+.wxy-dy{
+  margin-right: 120rpx
+}
+.wzl-dy{
+ margin-right: 120rpx
+}
+/* 微心愿列表 */
+/* 横向滚动 */
+.scroll_view-box{
+  height: 388rpx;
+  width: 720rpx
+}
+.lv_white-space_nowrap{
+  white-space: nowrap;
+  margin-left: 30rpx
+}
+.lv_display-inline_block{
+  border-radius: 10rpx;
+  box-shadow: #d5d5d6 6rpx 6rpx 6rpx 0;
+  height: 350rpx;
+  width: 300rpx; 
+  margin-right: 30rpx;
+  display: inline-block;
+  word-break:break-all;
+  white-space: pre-line;/* 不保留空白 */
+  /* white-space: pre-wrap */
+  overflow:hidden;
+}
+.wycy-title{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-weight: 600;
+  margin-top:18rpx
+}
+.wycy-text{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 8rpx 2rpx 10rpx 10rpx;
+  font-size: 24rpx
+}
+.lv_wxbj{
+  position: relative;
+  height: 180rpx;
+  width: 300rpx;
+  border-radius: 8rpx 8rpx 0 0
+}
+.bj-text{
+  position: absolute;
+  top: 26rpx;
+  right: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 20rpx;
+  border-radius: 10rpx 0 0 10rpx;
+  background: #FB604E;
+  color: #fff
+}
+/* 微治理 */
+.wzl_text{
+  padding: 5rpx 30rpx
+}
+/* 更多 */
+.wycy-gd{
+  margin:10rpx 20rpx 10rpx 20rpx;
+  padding: 15rpx 0;
+  position: relative;
+  text-align: center
+}

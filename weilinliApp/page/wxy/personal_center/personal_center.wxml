@@ -1,0 +1,45 @@
+<!--page/wxy/personal_center/personal_center.wxml-->
+<view>
+  <view class="lv_banner" style="background: url(https://wechat.tenqent.com/WebImg/wll-img/banner.jpg)no-repeat center center;background-size: cover">
+    <view class="personal-flexs">
+      <view class="personal-bj" style="background: url(https://wechat.tenqent.com/WebImg/wll-img/joinwll.jpg)no-repeat center center;background-size: cover"></view>
+      <text style="color:#fff">you is name</text>
+    </view>
+  </view>
+  <view class="personal-ul lv_border_bottom">
+    <view  class="personal-ul-bj szbj-pad">
+      <view class="personal-li-bj" style="height:70rpx;width:70rpx;background: url(https://wechat.tenqent.com/WebImg/wll-img/toumin-sz.png)no-repeat center center;background-size: cover"></view>
+    </view>
+    <text>时间银行：8小时</text>
+  </view>
+  <view class="personal-ul lv_border_bottom">
+    <view  class="personal-ul-bj jggbj-pad jgg-bjcolor">
+      <view class="personal-li-bj" style="height:70rpx;width:70rpx;background: url(https://wechat.tenqent.com/WebImg/wll-img/toumin-jgg.png)no-repeat center center;background-size: cover"></view>
+    </view>
+    <text>所属网格：004</text>
+  </view>
+  <view class="personal-ul lv_border_bottom">
+    <view  class="personal-ul-bj szbj-pad dh-bjcolor">
+      <view class="personal-li-bj" style="height:70rpx;width:70rpx;background: url(https://wechat.tenqent.com/WebImg/wll-img/toumin-dh.png)no-repeat center center;background-size: cover"></view>
+    </view>
+    <text>联系电话：xxxxxxxxx</text>
+  </view>
+  <view class="personal-ul lv_border_bottom">
+    <view  class="personal-ul-bj szbj-pad fb-bjcolor">
+      <view class="personal-li-bj" style="height:70rpx;width:70rpx;background: url(https://wechat.tenqent.com/WebImg/wll-img/toumin-fb.png)no-repeat center center;background-size: cover"></view>
+    </view>
+    <text>我的发布：3件</text>
+  </view>
+  <view class="personal-ul lv_border_bottom">
+    <view  class="personal-ul-bj szbj-pad cy-bjcolor">
+      <view class="personal-li-bj" style="height:70rpx;width:70rpx;background: url(https://wechat.tenqent.com/WebImg/wll-img/toumin-cy.png)no-repeat center center;background-size: cover"></view>
+    </view>
+    <text>我的发布：0件</text>
+  </view>
+  <view class="personal-ul lv_border_bottom">
+    <view  class="personal-ul-bj szbj-pad sh-bjcolor">
+      <view class="personal-li-bj" style="height:70rpx;width:70rpx;background: url(https://wechat.tenqent.com/WebImg/wll-img/toumin-sh.png)no-repeat center center;background-size: cover"></view>
+    </view>
+    <text>我的说事：0件</text>
+  </view>
+</view>

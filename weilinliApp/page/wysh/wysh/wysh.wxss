@@ -1,0 +1,76 @@
+/* page/wysh/wysh/wysh.wxss */
+
+.active{
+  color:#04BE01
+}
+
+/* 我要说事 */
+.wysh-view{
+  padding: 30rpx;
+  justify-content: space-between;
+  border-top:30rpx solid #f0f0f0 
+}
+.wysh_text{
+  width: 170rpx;
+}
+.wysh-bj{
+  height:44rpx;
+  width:30rpx;
+}
+.wysh-bjb{
+  display: -webkit-flex;
+  margin-bottom:30rpx
+}
+.wysh-bjleft{
+  margin-left: 30rpx
+}
+.wysh-yuyin{
+  padding: 30rpx
+}
+/* 文本框 */
+.wysh-textarea{
+  padding: 20rpx;
+  display: -webkit-flex;
+  justify-content: center
+}
+.text-nanber{
+  padding: 0 30rpx 30rpx 0;
+  text-align: right;
+  color: #999
+}
+/* 上传图片 */
+.wysh-shangchuan{
+  padding: 30rpx
+}
+.lv__inputstyle-box{
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  padding:  30rpx 0 30rpx 18rpx
+}
+.lv__input{
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.lv__input-box{
+  margin:0  30rpx 40rpx 30rpx
+}
+/* 按钮样式 */
+.wysh-slidetoggle{
+  display: -webkit-flex;
+  justify-content: space-between;
+  padding:10rpx  30rpx;
+  border-top: 30rpx solid #f0f0f0;
+  line-height: 56rpx
+}
+.wysh-btn{
+  margin-top:30rpx; 
+  width:690rpx;
+  color:#fff;
+  background-image:-webkit-linear-gradient(top,rgb(81,231,118),rgb(57,195,79));
+}

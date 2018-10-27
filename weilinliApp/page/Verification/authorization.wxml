@@ -1,0 +1,2 @@
+<!--page/Verification/authorization.wxml-->
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">点击授权</button>

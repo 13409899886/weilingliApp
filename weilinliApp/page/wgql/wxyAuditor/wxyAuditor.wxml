@@ -1,0 +1,29 @@
+<!--page/wxy/wxyAuditor/wxyAuditor.wxml-->
+<view class='box' >
+
+  <view  class="weui-media-box weui-media-box_appmsg" wx:for="{{list.friend}}" wx:key="{{index}}"  data-val="{{item}}" data-title="{{item.name}}"  catchtap='toMsg'>
+      <view class="weui-media-box__hd">
+          <image mode="aspectFill" style="width: 60px; height: 60px;" class="" src='{{item.avatar}}' alt=""></image>
+      </view>
+      <view class="weui-media-box__bd">
+          <view class="weui-media-box__title">
+            <text style='float:left'> {{item.name}}</text>
+            <text style='float:right' class='time'> {{item.chat_time}}</text>
+          </view>
+          <rich-text  nodes="{{item.content}}" class="weui-media-box__desc"></rich-text>
+      </view>
+  </view>
+  <view  class="weui-media-box weui-media-box_appmsg group" data-val="{{list.group}}" data-title="{{list.group.qunname}}" catchtap='toMsg'>
+      <view class="weui-media-box__hd">
+          <image mode="aspectFill" wx:for="{{list.group.avatar}}" wx:key="{{index}}" style="width: 20px; height: 20px;" class="" src='{{item}}' alt=""></image>
+      </view>
+      <view class="weui-media-box__bd">
+          <view class="weui-media-box__title">
+            <text style='float:left'> {{list.group.qunname}}</text>
+            <text style='float:right' class='time'> {{list.group.last_message.date}}</text>
+          </view>
+          <rich-text  nodes="{{list.group.last_message.content}}" class="weui-media-box__desc"></rich-text>
+      </view>
+  </view>
+  
+</view>

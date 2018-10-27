@@ -1,0 +1,53 @@
+/* page/wxy/personal_center/personal_center.wxss */
+.personal-bj{
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.personal-flexs{
+  display: -webkit-flex;
+  align-items: center;
+  padding: 112rpx 0 0 80rpx;
+}
+.personal-ul{
+  position: relative;
+  padding: 20rpx 30rpx;
+  display: -webkit-flex;
+  align-items: center;
+}
+.personal-ul-bj{
+  height: 80rpx;
+  width:80rpx;
+  background: #FFC300;
+  margin-right: 30rpx;
+  border-radius: 50%;
+}
+.jgg-bjcolor{
+ background: #F76162;
+}
+.dh-bjcolor{
+  background: #9BD127;
+}
+.fb-bjcolor{
+  background: #78BBB4;
+}
+.cy-bjcolor{
+  background: #1C8407;
+}
+.shh-bjcolor{
+  background: #648AAF;
+}
+.personal-li-bj{
+  height: 60rpx;
+  width: 60rpx;
+}
+.li-bjradius{
+  border-radius: 50%;
+}
+.szbj-pad{
+  padding:  10rpx 0 0 10rpx;
+}
+.jggbj-pad{
+  padding:  12rpx 0 0 12rpx;
+}

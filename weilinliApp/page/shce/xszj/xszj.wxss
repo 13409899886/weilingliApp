@@ -1,0 +1,24 @@
+/* page/shce/aytj/aytj.wxss */
+.active{
+  color:#04BE01
+}
+.bs-title{
+  font-weight: 900;
+  font-size: 36rpx
+}
+.aytj-text{
+  padding: 20rpx 30rpx;
+  line-height: 1.6
+}
+.ayti-text-flex{
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+.text-width{
+  width: 450rpx;
+  display: -webkit-box;
+ -webkit-line-clamp: 1;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ text-overflow: ellipsis
+}

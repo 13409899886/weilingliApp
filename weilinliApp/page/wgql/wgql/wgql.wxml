@@ -1,0 +1,135 @@
+<!--pages/wgql/wgql.wxml-->
+<view>
+  <!-- 消息列表 -->
+  <view  class='comback'>
+    <navigator open-type="redirect" url = "/page/wgql/wxyAuditor/wxyAuditor" >
+      <view class='iconfont icon-ai207'></view>消息列表{{log}}
+    </navigator>
+     
+    <navigator url = "/page/wgql/groupCenter/groupCenter" >
+      <view class='iconfont icon-nav_client-copy'></view>
+    </navigator>
+  </view>
+  <!-- 聊天展示窗口 -->
+  <!--  bindscrolltoupper="startPullDownRefresh"-->
+  <scroll-view 
+  class="chatWindow" 
+  scroll-y 
+  style="height: {{clientHeight?clientHeight+'px':'auto'}}" 
+  scroll-with-animation="true" 
+  scroll-into-view="{{scrollTo}}"  
+  bindscrolltoupper="startPullDownRefresh" >
+      <view  
+      class='chatObj'
+      wx:for="{{megList}}" 
+      wx:key="{{item}}" 
+      id="To{{index}}">
+        <text wx:if="{{item.add_time}}" class='time'>{{item.chat_time}}</text>
+        <view class='{{item.content.openid==openid?"right":"left"}}'>
+           <view>
+              <view class='userInfo'>
+                <image style="width: 30px; height: 30px; background-color: #eeeeee;"  src="{{item.content.headimgurl}}"></image>
+                <text>{{item.content.name}}</text>
+              </view>
+              <view class='content' 
+              bindtouchstart="recallStart" 
+              bindtouchend="recallEnd"
+               data-index="{{index}}"  >
+                <view class='btnContainer' wx:if="{{item.isrecallShow}}">
+                  <button 
+                  size="mini" 
+                  wx:if="{{yhsf==0&&item.content.openid!=openid}}"
+                  catchtap="delBtn" 
+                  data-id="{{item.id}}"
+                   data-index="{{index}}"  
+                  >删除</button>
+                  <button 
+                  wx:if="{{item.content.openid==openid}}"
+                  size="mini"
+                  catchtap="recallBtn"
+                  data-id="{{item.id}}"
+                   data-index="{{index}}"
+                  >撤回</button>
+                </view>  
+                <rich-text wx:if="{{item.msgtype=='text'}}"  nodes=" {{item.content.content}}" ></rich-text>
+                {{item.msgtype}}
+                 <div class='iconfont icon-yuyin-copy'
+                    data-src='{{item.content}}'
+                    catchtap='audioPlay'
+                    wx:if="{{item.msgtype=='MP3'}}">
+                 </div>
+              </view>
+           </view>
+        </view>
+      </view>
+      <view style='height:100px; background:#f0f0f0' id="ToBottom"></view>
+  </scroll-view>
+  <!-- 聊天输入框 -->
+  <view class="lv_tabber">
+    <view class="tabber-inputs-box lv_border_top lv_border_bottom">
+      <view class="lv_tabber-inputs">
+        <view class="iconfont icon-yuyin-copy lv_tabber-img" bindtap="msgTypeChange"></view>
+        <button type="primary" catchtouchstart="recordStart" catchtouchmove="recordMove" catchtouchend="recordEnd" class="clVideoBtn" size="mini" wx:if="{{msgTypeChange}}" >按住 说话</button>
+        <textarea class="lv_textareas lv_border_bottom" bindinput="bindKeyInput" wx:if="{{!msgTypeChange}}" value="{{content}}" fixed="true" auto-height  show-confirm-bar="" maxlength='-1'/>
+        <view class="iconfont icon-xiaolian-copy lv_tabber-img" bindtap='FaceShow'></view> 
+        <view class="iconfont icon-tianjia1 wgql_img-mag" bindtap="onclickMsg" wx:if="{{!content||msgTypeChange}}"></view>
+        <button type="primary" size="mini" data-contentType="chatMessage" bindtap="sendMessage" wx:if="{{content&&!msgTypeChange}}"> 发送 </button>
+        
+      </view>
+    </view>
+     
+    <view wx:if="{{hideShows}}">
+      <swiper  duration="400" indicator-dots="true" bindchange="swiperTab" class="swiper">
+        <swiper-item >
+          <view class="wgql-flex-img wgql-flex-img-mag">
+            <view class="wgql-img-box" bindtap='chooseImage'>
+              <navigator class="wgql-navigator" url="">
+                <view class="wgql-img">
+                  <view class="wgql-img-mag">
+                    <image class="wgql-image" src='https://wechat.tenqent.com/WebImg/wll-img/tupian.jpg'></image>
+                  </view>
+                </view>
+              </navigator>
+              <text>照片</text>
+            </view>
+            <view class="wgql-img-box">
+              <navigator class="wgql-navigator" url="">
+                <view class="wgql-img">
+                  <view class="wgql-img-mag">
+                    <image class="wgql-image" src='https://wechat.tenqent.com/WebImg/wll-img/zuobiao.jpg'></image>
+                  </view>
+                </view>
+              </navigator>
+              <text>我要说事</text>
+            </view>
+            <view class="wgql-img-box">
+              <navigator class="wgql-navigator" url="">
+                <view class="wgql-img">
+                  <view class="wgql-img-mag">
+                    <image class="wgql-image" src='https://wechat.tenqent.com/WebImg/wll-img/qunzu.jpg'></image>
+                  </view>
+                </view>
+              </navigator>
+              <text>我要参与</text>
+            </view>
+            <view class="wgql-img-box">
+              <navigator class="wgql-navigator" url="">
+                <view class="wgql-img">
+                  <view class="wgql-img-mag">
+                    <image class="wgql-image" src='https://wechat.tenqent.com/WebImg/wll-img/qunzu.jpg'></image>
+                  </view>
+                </view>
+              </navigator>
+              <text>通知公告</text>
+            </view>
+          </view>
+        </swiper-item>
+    </swiper>
+    
+    </view>
+   
+    <scroll-view scroll-y style="height: 180rpx;" class='iconface' wx:if="{{faceShow}}">
+        <image wx:key="{{index}}" data-val="{{index}}" bindtap="checkFace" class="wgql-image" wx:for="{{faceList}}" bindtap='checkFace'  src='../../../utils/images/{{index}}.gif'></image>
+    </scroll-view>
+  </view>
+</view>

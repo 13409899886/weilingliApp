@@ -1,0 +1,35 @@
+/* page/Verification/smrq/smrq.wxss */
+.smrq-radio{
+  display: -webkit-flex;
+  width: 570rpx
+}
+.radio-box{
+  padding-left: 30rpx
+}
+.smrq-text{
+  width: 150rpx
+}
+.radio-right{
+  margin-right: 40rpx
+}
+.smrq-box{
+  height: 1000rpx;
+  background: #f0f0f0;
+  display:-webkit-flex;
+  justify-content: center
+}
+.smrq-bj{
+  margin-top:30rpx;
+  height: 930rpx;
+  width:620rpx
+}
+radio{
+  position: relative;
+  top: -2rpx
+}
+.wgybd_btn{
+  margin: 40rpx 20rpx 30rpx 0px;
+  width: 690rpx;
+  color:#fff;
+  background-image:-webkit-linear-gradient(top,rgb(81,231,118),rgb(57,195,79))
+}

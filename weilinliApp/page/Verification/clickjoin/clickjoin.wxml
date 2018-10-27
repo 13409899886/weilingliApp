@@ -1,0 +1,17 @@
+<!--page/Verification/clickjoin/clickjoin.wxml-->
+<view class="clickjoin">
+  <view class="joinbj-box">
+    <view class="join-bj" style="background: url(https://wechat.tenqent.com/WebImg/wll-img/joinwll.jpg)no-repeat center center;background-size: cover"></view>
+    <view class="join-text">
+        <view class="jointext">
+          欢迎关注武汉微邻里。
+          <navigator class="join-navigator">点击加入xxx网格</navigator>
+        </view>
+        <view class="sanjiaor"></view>
+      </view>
+  </view>
+    
+</view>
+
+
+

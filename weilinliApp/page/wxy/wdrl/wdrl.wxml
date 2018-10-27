@@ -1,0 +1,36 @@
+<!--page/wxy/wdrl/wdrl.wxml-->
+<view>
+  <view class="lv-ul">
+    <view class="lv-btn-flex">
+      <view class="bs-title">社区帮扶</view>
+    </view>
+    <view>发布时间：2018-05-06</view>
+    <view>诉求人：xxx</view>
+    <view >报事内容：</view>
+    <view>事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+  </view>
+  <view class="lv-ul">
+    <view>状态：已审核</view>
+  </view>
+  <view class="lv-ul">
+    <view>认领人回复：学习机已送达居民手中</view>
+    <view class="wdrl_bj" style="background: url(https://wechat.tenqent.com/WebImg/wll-img/ba.jpg)no-repeat center center;background-size: cover"></view>
+  </view>
+  <view class="lv-ul">
+    <view>
+      <view class="xingxing-flex">
+      <view>居民评价：</view>
+      <view>
+        <block wx:for="{{one_2}}" wx:key="index">
+        <image class="xing-lmage" catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='https://wechat.tenqent.com/WebImg/wll-img/xingxingh.png'></image>
+        </block>
+        <block wx:for="{{two_2}}" wx:key="index">
+        <image class="xing-lmage" catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='https://wechat.tenqent.com/WebImg/wll-img/xingxinghui.png'></image>
+        </block>
+      </view>
+    </view>
+    </view>
+    <view class="lv_text-indent">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+    <view class="wdrl_bj" style="background: url(https://wechat.tenqent.com/WebImg/wll-img/ba.jpg)no-repeat center center;background-size: cover"></view>
+  </view>
+</view>

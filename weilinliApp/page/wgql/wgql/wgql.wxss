@@ -1,0 +1,238 @@
+/* pages/wgql/wgql.wxss */
+
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_873008_23g3i3o7q48.eot?t=1540263876173'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_873008_23g3i3o7q48.eot?t=1540263876173#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAASoAAsAAAAABwAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFY9OUi2Y21hcAAAAYAAAABSAAABfoIS62xnbHlmAAAB1AAAANoAAADkOEtPaGhlYWQAAAKwAAAALwAAADYTCKWFaGhlYQAAAuAAAAAcAAAAJAfeA4RobXR4AAAC/AAAAAwAAAAMDAAAAGxvY2EAAAMIAAAACAAAAAgAGgBybWF4cAAAAxAAAAAeAAAAIAEQAEBuYW1lAAADMAAAAUUAAAJtPlT+fXBvc3QAAAR4AAAAMAAAAEHi+iCleJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkYWCcwMDKwMHUyXSGgYGhH0IzvmYwYuRgYGBiYGVmwAoC0lxTGByeHX52hLnhfwNDDHMDQwNQmBEkBwD7sA1qeJztkLkNgEAMBMc+Q4Aog4CAYohomKuFNg4/lMFKM9KuHBmYgOYcjoFcCJHTV8m9seRubHljsT99DPcd9m5pdc38WdP71zT+VNTnCvQF1n4P4wAAeJxjYGQAAuYGpgMMnAwMjKacjKZmYuJqTIyr/l1h1Jn/PED2DpPo6n9X/l1dz5hdsIyRG6ycgeH/DuavzB4MEgwqDMYMDKpmtox6jOp2jOZq6nKM4iJs7EBSlI+RHSoK5PExMgL5ikC+KUSAOYGHsTJFQ5eRUdEznklbNaGciVFK+O+GhEYmpsaERBDJyMNoovb3rpoJI8u5WbPPsQiLSrr6lMurZdl527IXBZtFyIhluLiKSDIy2jP3Zmf1MjP3ZmX3/tuvbszIaKzukt3LxNSbzcAAAJ79MxUAAHicY2BkYGAA4qoI7ffx/DZfGbhZGEDg+pcNRxD0/x0sDMweQC4HAxNIFABWaQwrAHicY2BkYGBu+N/AEMPCAAJAkpEBFTADAEcJAmwEAAAABAAAAAQAAAAAAAAAABoAcnicY2BkYGBgZjABYhBgAmIuIGRg+A/mMwAADfQBUQAAeJxlj01OwzAQhV/6B6QSqqhgh+QFYgEo/RGrblhUavdddN+mTpsqiSPHrdQDcB6OwAk4AtyAO/BIJ5s2lsffvHljTwDc4Acejt8t95E9XDI7cg0XuBeuU38QbpBfhJto41W4Rf1N2MczpsJtdGF5g9e4YvaEd2EPHXwI13CNT+E69S/hBvlbuIk7/Aq30PHqwj7mXle4jUcv9sdWL5xeqeVBxaHJIpM5v4KZXu+Sha3S6pxrW8QmU4OgX0lTnWlb3VPs10PnIhVZk6oJqzpJjMqt2erQBRvn8lGvF4kehCblWGP+tsYCjnEFhSUOjDFCGGSIyujoO1Vm9K+xQ8Jee1Y9zed0WxTU/3OFAQL0z1xTurLSeTpPgT1fG1J1dCtuy56UNJFezUkSskJe1rZUQuoBNmVXjhF6XNGJPyhnSP8ACVpuyAAAAHicY2BigAAuBuyAmZGJkZmRhYE1MdPIwJw/L7EsPjknMzWvRDc5v6CSgQEAYDkHng==') format('woff'),
+  url('//at.alicdn.com/t/font_873008_23g3i3o7q48.ttf?t=1540263876173') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_873008_23g3i3o7q48.svg?t=1540263876173#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+/* .iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+.icon-ai207:before { content: "\e6c3"; }
+.icon-nav_client-copy:before { content: "\e6c4"; }
+.icon-ai207,.icon-nav_client-copy{display: inline-block; font-size: 30rpx ! important;background: #fff}
+/*吕蒙*/
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_808746_arn98cxfewj.eot?t=1535601617586'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_808746_arn98cxfewj.eot?t=1535601617586#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'),
+  url('//at.alicdn.com/t/font_808746_arn98cxfewj.ttf?t=1535601617586') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_808746_arn98cxfewj.svg?t=1535601617586#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:60rpx;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tianjia:before { content: "\e600"; }
+
+.icon-tianjia1:before { content: "\e653"; }
+
+.icon-xiaolian-copy:before { content: "\e637"; }
+
+.icon-yuyin-copy:before { content: "\e638"; }
+/*播放语音*/
+.audio{
+  width: 15px ; height: 15px; background:url()
+}
+/* 聊天框 */
+.lv_border_bottom{
+  position: absolute
+}
+.tabber-inputs-box{
+  position: relative;
+  padding-top: 1rpx
+}
+.lv_tabber{
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  background:#fff;
+  z-index: 10000000000;
+  
+}
+.lv_tabber-inputs{
+  display: -webkit-flex;
+  padding: 20rpx 0;
+  /* padding: 0 0 20rpx 0; */
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.lv_textareas{
+  position: relative;
+  top: 0rpx;
+  /* padding-bottom: 20rpx; */
+  /* margin:10rpx 0 30rpx 0; */
+  margin-left: 10rpx;
+  width: 480rpx;
+  height:60rpx
+}
+image.wgql_img-mag{
+  margin-left: 0
+}
+.lv_tabber-img{
+  height:60rpx;
+  width:60rpx;
+  margin: 0 20rpx;
+}
+/* 添加界面 */
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
+.wgql-flex-img-mag{
+ 
+}
+.wgql-flex-img{
+  width: 750rpx;
+  display: -webkit-flex;
+  justify-content: center
+}
+.wgql-img-box{
+  height: 170rpx;
+  margin: 20rpx 20rpx;
+  text-align: center
+}
+.wgql-img{
+  width: 100rpx;
+  text-align:center
+}
+.wgql-navigator{
+  width: 126rpx;
+  border-radius: 32rpx
+}
+.wgql-img-mag{
+  height: 120rpx;
+  width: 120rpx;
+  border:2rpx solid #ccc;
+  border-radius: 32rpx;
+  margin-bottom: 10rpx;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center
+}
+.wgql-image{
+  height:80rpx;
+  width:80rpx
+}
+.wgql-flex-img-b{
+  padding:0 20rpx 0 40rpx;
+  display: -webkit-flex
+}
+text{
+  font-size:26rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.iconface{
+  padding: 30rpx;
+  box-sizing:border-box;
+
+}
+.chatWindow .left .content{background:#fff;}
+.iconface image{height: 40rpx;width:40rpx; margin-left:2px;}
+.chatWindow{ min-height: 100%}
+.chatWindow .left .content,.chatWindow .left .userInfo{float: left;}
+.chatWindow .right .content,.chatWindow .right .userInfo{float: right}
+.chatWindow .right .userInfo,.chatWindow .left .userInfo{text-align: center}
+.chatWindow  .content{max-width: 450rpx;position: relative;background: #a2e65b;border: 1px solid #ddd;padding: 15px 15px;margin: 0 15px;border-radius: 2px; text-align: left;word-break:break-all;word-wrap:break-word;position: relative}
+.chatWindow  .content img{vertical-align: middle}
+/* .chatWindow  .content .rich-text{font-size: 40rpx} */
+/* .chatWindow .left,.chatWindow .right{overflow: hidden} */
+.chatWindow text.time{text-align: center; padding: 2px 5px; border-radius: 2px; background: #ddd;color: #333;display: inline;margin-bottom: 15px;}
+.chatWindow{text-align: center}
+.chatWindow .face{height: 40rpx;width: 40rpx; vertical-align: middle}
+.chatWindow .left .content::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 5px;
+    left: -6px;
+    border-right:none;
+    border-bottom:none;
+    transform: skew(45deg);
+    background: #fff;
+  }
+  .chatWindow .right .content::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 5px;
+    right: -6px;
+    border-left:none;
+    border-bottom:none;
+    transform: skew(-45deg);
+    background: #a2e65b;
+    
+  }
+  .chatObj{padding: 15px 15px 0; overflow: hidden}
+  .chatObj>view{margin-top: 15px}
+  .lv_tabber button{width: 70px;height:60rpx; line-height: 60rpx;padding: 0 5px}
+  .content{font-size: 36rpx;min-height:36rpx}
+  .swiper view{background: #fff}
+  .comback{background: #fff;padding: 10px 15px; line-height: 2; position: fixed; top: 0;left: 0; right:0;z-index: 100;display: flex; justify-content: space-between; align-items: center }
+  .comback::before{
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 1px;
+        border-top: 1px solid #E5E5E5;
+        color: #E5E5E5;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+  }
+  .lv_tabber .clVideoBtn{width: 480rpx}
+  .btnContainer{
+    position: absolute;
+    left: 0;top: 0;
+    transform: translateY( -100%);
+    z-index:1000;
+    width: 150px;
+    background: rgba(255,255,255,0)
+  }
+  .right .btnContainer{
+    left: initial;
+    right: 0;
+    text-align: right;
+  }
+  .right .btnContainer button{
+    font-size: 12px;
+    padding: 0 5px
+  }
+   .btnContainer button+button{
+    margin-left: 5px
+  }
+  .comback .iconfont{font-size: 40rpx !important}
+  .comback{line-height: 1}
+  .content .img{
+    max-width: 100%
+  }

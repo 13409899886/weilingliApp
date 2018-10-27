@@ -1,0 +1,35 @@
+<!--page/wysh/wdsh/wdsh.wxml-->
+<view>
+  <view class="swiper-tab lv_border_top">
+    <view bindtap="bindViewTap" class="lv_border_bottom  wysh-size swiper-tab-item ">
+      <view class="wysh-size  {{currentTab==0?'active':''}}">我要说事</view>
+    </view>
+    <view class="wysh-size swiper-tab-item ">
+      <view class="wysh-size  {{currentTab==1?'active':''}}">我的说事</view>
+    </view>
+  </view>
+  <view class="lv-bordertop">
+    <view class="lv-ul">
+      <view class="lv-btn-flex">
+        <view>诉求人：</view>
+        <button class="lv_btn">已提交</button>
+      </view>
+      <view bindtap="bindViewTapb">
+        <view>联机电话：xxxxxxxxxxx</view>
+        <view class="lv-line">事件地点：武汉市武昌区复兴路26号</view>
+        <view class="lv-line">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view> 
+      </view>
+    </view>
+    <view class="lv-ul">
+        <view class="lv-btn-flex">
+          <view>诉求人：</view>
+          <button class="lv_btn">已提交</button>
+        </view>
+        <view bindtap="bindViewTapb">
+        <view>联机电话：xxxxxxxxxxx</view>
+        <view class="lv-line">事件地点：武汉市武昌区复兴路26号</view>
+        <view class="lv-line">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view> 
+      </view>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,71 @@
+<!--page/wysh/wdshDatalis/wdshDetails.wxml-->
+<view class="swiper-tab lv_border_top">
+  <view  bindtap="bindViewTap" class="lv_border_bottom  wysh-size swiper-tab-item {{currentTab==0?'active':''}}">
+    <view class="wysh-size  {{currentTab==0?'active':''}}">我要说事</view>
+  </view>
+  <view bindtap="bindViewTapb" url="" class="wysh-size swiper-tab-item {{currentTab==1?'active':''}}">
+    <view class="wysh-size {{currentTab==1?'active':''}}">我的说事</view>
+  </view>
+</view>
+<view class="lv-bordertop">
+  <view class="lv-ul">
+    <view class="lv-btn-flex">
+      <view>诉求人：xxx</view>
+    </view>
+    <view>联机电话：xxxxxxxxxxx</view>
+    <view>事件地点：武汉市武昌区复兴路26号</view>
+    <view>事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view> 
+  </view>
+  <view class="lv-ul">
+    <view class="lv-btn-flex">
+      <view>提交：</view>
+    </view>
+    <view class="lv_text-indent">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+  </view>
+  <view class="lv-ul">
+    <view class="lv-btn-flex">
+      <view>受理：</view>
+    </view>
+    <view class="lv_text-indent">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+  </view>
+  <view class="lv-ul">
+    <view class="lv-btn-flex">
+      <view>办理：</view>
+    </view>
+    <view class="lv_text-indent">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+  </view>
+  <view class="lv-ul">
+    <view class="lv-btn-flex">
+      <view>办结：</view>
+    </view>
+    <view class="lv_text-indent">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+  </view>
+</view>
+<!-- 五星评分 -->
+<view class="pingfen" style="border-bottom: 80rpx solid #f0f0f0">
+  <view>评价：</view>
+  <view class="xingxing-flex">
+    <view>
+      <block wx:for="{{one_2}}" wx:key="index">
+      <image class="xing-lmage" catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='https://wechat.tenqent.com/WebImg/wll-img/xingxingh.png'></image>
+      </block>
+      <block wx:for="{{two_2}}" wx:key="index">
+      <image class="xing-lmage" catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='https://wechat.tenqent.com/WebImg/wll-img/xingxinghui.png'></image>
+      </block>
+    </view>
+    <view class="xing-textcolor">{{one_2}}分</view>
+  </view>
+</view>
+<!-- 进度条 -->
+<view class='order_process lv_bj-colorfo'>
+  <view class='process_wrap' wx:for="{{processData}}" wx:key="">
+    <view class='process'>
+      <view class='process_line' ></view>
+      <image class='process_icon' src="{{item.icon}}"></image>
+      <view class='process_line' ></view>
+    </view>
+    <text class='process_name'>{{item.name}}</text>
+    <text class='process_name'>{{item.year}}</text>
+    <text class='process_name'>{{item.tiem}}</text>
+  </view>
+</view>

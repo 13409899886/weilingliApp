@@ -1,0 +1,13 @@
+/* page/wxy/wdrl/wdrl.wxss */
+.bs-title{
+  font-weight: 900;
+  font-size: 36rpx
+}
+.wdrl_bj{
+  height: 200rpx;
+  width: 200rpx;
+  margin: 20rpx 0 0 20rpx
+}
+.xingxing-flex{
+  padding-left: 0
+}
