@@ -5,3 +5,13 @@
 .pingfen{
   border-bottom: 80rpx solid #f0f0f0
 }
+.lv-ul, .lv-ul view{
+  background: #fff
+}
+.order_process,.order_process view:not(.process_line){background: #fff}
+/* .process_line,.process_icon {
+  background-color:#FFC000
+} */
+.time{font-size: 18rpx; text-align: center}
+/* .process_icon{width: 36rpx; height: 36rpx} */
+.process_line {height: 4rpx}

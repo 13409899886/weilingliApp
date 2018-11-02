@@ -1,39 +1,37 @@
-// page/wgql/notice/notice.js
+// page/wgql/tzxx/details/details.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    noticeDetails:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
     wx.showLoading()
     wx.request({
       method: "POST",
-      url: getApp().globalData.api + 'chat_room/chat_notice_list',
+      url: getApp().globalData.api + "notice/details",
       data: {
-        wgbm: getApp().globalData.wangge_id,
+        id: options.id
       },
       success: (res) => {
         wx.hideLoading()
         if (res.data.code == 1) {
-          // res.data.data.sort((a,b)=>{
-          //   return  a.id - b.id
-          // })
           var data = res.data.data
-
-          this.setData({'noticeList':data})
+          const regex = new RegExp('<img', 'gi');
+          data.content=data.content.replace(regex, `<img style="max-width: 100%;"`);
+          this.setData({ 'noticeDetails': data })
         }
       }
     })
-    
   },
-  
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

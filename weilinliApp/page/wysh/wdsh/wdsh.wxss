@@ -3,3 +3,24 @@
 .active{
   color:#04BE01
 }
+.lv-ul, .lv-ul view{
+  background: #fff
+}
+.lv-ul{
+  border-bottom: none;
+  position: relative
+}
+.lv-ul:before{
+  content: " ";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #E5E5E5;
+    color: #E5E5E5;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    left: 15px;
+}

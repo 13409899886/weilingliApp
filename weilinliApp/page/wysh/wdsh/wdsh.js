@@ -5,15 +5,17 @@ Page({
    */
   data: {
     currentTab: 1,
+    dataList:[]
   },
   bindViewTap: function () {
     wx.redirectTo({
       url: '../../wysh/wysh/wysh',
     })
   },
-  bindViewTapb: function () {
+  bindViewTapb: function (e) {
+    
     wx.redirectTo({
-      url: '../../wysh/wdshDetails/wdshDetails',
+      url: '../../wysh/wdshDetails/wdshDetails?id=' + e.currentTarget.dataset.id,
     })
   },
   //滑动切换
@@ -38,7 +40,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    wx.showToast({
+      icon: "loading",
+      mask: true,
+      duration: 10000
+    })
+    wx.request({
+      method: "POST",
+      url: getApp().globalData.api + 'baoshi/my_report',
+      data: {
+        openid: "oaorM4ssPgLKfEKXn76Fek6uwPvE"//getApp().globalData.openId
+      },
+      success: (res) => {
+        wx.hideToast()
+        if (res.data.code==1){
+          this.setData({ "dataList": res.data.data })
+        }else{
+          wx.showToast({
+            icon: "none",
+            mask: true,
+            duration: 1500
+          })
+        }
+        
+      }
+    })
   },
 
   /**

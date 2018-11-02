@@ -9,46 +9,34 @@
     </view>
   </view>
       <view class="lv_bj-colorfo" style="height:1302rpx;">
-        <form bindsubmit="formSubmit" bindreset="formReset">
+        <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
           <view class="lv_sections lv_border_bottom wysh-view lv_bj-color">
             <text class="lv_texts wysh-size wysh_text">事发地址：</text>
-            <input class="lv_input" placeholder="如果定位失败请选择图" />
-            <navigator>
-              <view class="wysh-bj" style="background: url(https://wechat.tenqent.com/WebImg/wll-img/wysh-dingwei.png)no-repeat center center;background-size: cover;"></view>
-            </navigator>
+            <input class="lv_input" value="{{location}}" placeholder="如果定位失败请选择图" />
+            
+            <view class="wysh-bj" style="background: url(https://wechat.tenqent.com/WebImg/wll-img/wysh-dingwei.png)no-repeat center center;background-size: cover;" bindtap='checkAddress'></view>
+            
           </view>
           <view class="wysh-yuyin lv_bj-colorfo">
-            <view class="wysh-bjb">
+            <!-- <view class="wysh-bjb">
               事件描述 语音输入
               <view class="wysh-bj wysh-bjleft" style="background: url(https://wechat.tenqent.com/WebImg/wll-img/wysh-huatong.png)no-repeat center center;background-size: cover;"></view>
-            </view>
+            </view> -->
             <view class="wysh-textarea lv_bj-color">
-              <textarea style="height:140rpx;" maxlength="200" show-confirm-bar="" name="textarea" placeholder="例：上班时间推车进电梯，占用公共空间"></textarea>
+              <textarea style="height:140rpx;" maxlength="200" bindinput='textareaChange' show-confirm-bar="" name="textarea" placeholder="例：上班时间推车进电梯，占用公共空间"></textarea>
             </view>
-            <view class="text-nanber lv_bj-color">0/200</view>
-            <view class="wysh-shangchuan">
-              上传图片
-            </view>
+            <!-- <view class="text-nanber lv_bj-color">0/200</view> -->
+            
             <view class="wysh-tustyle lv_bj-color">
-                <view class="wysh-shangchuan wysh-size">上传图片：（最多选择三张）</view>
+                <view class="wysh-shangchuan wysh-size">上传图片：（{{tempFilePath.length}}/3）{{log}}</view>
                 <view class="lv__inputstyle-box">
-                  <view class="lv__input-box">
-                    <input class="lv__input" type="file"></input>
-                  </view>
-                  <view class="lv__input-box">
-                    <input class="lv__input" type="file"></input>
-                  </view>
-                  <view class="lv__input-box">
-                    <input class="lv__input" type="file"></input>
-                  </view>
-                  <view class="lv__input-box">
-                    <input class="lv__input" type="file"></input>
-                  </view>
+                  <image class="lv__input-box" mode="aspectFill" wx:for="{{tempFilePath}}" wx:key="index"  src="{{item}}"></image>
+                  <view class="lv__input-box" bindtap='chooseImage'></view>
                 </view>             
-                <view class="text-nanber lv_bj-color">0/3张</view>
+                
             </view>
             <view class="lv_bj-color wysh-slidetoggle wysh-size"><text>是否公开</text><switch checked bindchange="switch1Change"/></view>
-            <button class="wysh-btn" bindtap="setPlain" form-type="submit">确认</button>
+            <button class="wysh-btn" bindtap='submitBtn' formType="submit">确认</button>
           </view>
         </form>
       </view>

@@ -10,39 +10,42 @@
 <view class="lv-bordertop">
   <view class="lv-ul">
     <view class="lv-btn-flex">
-      <view>诉求人：xxx</view>
+      <view style='font-size:36rpx; margin-bottom:5px'>诉求人：{{dataInfo.name}}</view>
     </view>
-    <view>联机电话：xxxxxxxxxxx</view>
-    <view>事件地点：武汉市武昌区复兴路26号</view>
-    <view>事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view> 
+    <view>联机电话：{{dataInfo.tel}}</view>
+    <view>事件地点：{{dataInfo.location}}</view>
+    <view>事件描述：{{dataInfo.content}}</view> 
+    <view style='padding:15px 0'>
+      <image src="{{item }}" wx:for="{{dataInfo.images}}" style='width:200rpx;height:200rpx' mode='aspectFill'></image>
+    </view> 
   </view>
-  <view class="lv-ul">
+  <view class="lv-ul" wx:if="{{dataInfo.status>=0}}">
     <view class="lv-btn-flex">
       <view>提交：</view>
     </view>
-    <view class="lv_text-indent">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+    <view class="lv_text-indent">事件描述：{{dataInfo.tijiao_contents}}</view>
   </view>
-  <view class="lv-ul">
+  <view class="lv-ul" wx:if="{{dataInfo.status>=1}}">
     <view class="lv-btn-flex">
       <view>受理：</view>
     </view>
-    <view class="lv_text-indent">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+    <view class="lv_text-indent">事件描述：{{dataInfo.shouli_contents}}</view>
   </view>
-  <view class="lv-ul">
+  <view class="lv-ul" wx:if="{{dataInfo.status>=2}}">
     <view class="lv-btn-flex">
       <view>办理：</view>
     </view>
-    <view class="lv_text-indent">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+    <view class="lv_text-indent">事件描述：{{dataInfo.chuli_contents}}</view>
   </view>
-  <view class="lv-ul">
+  <view class="lv-ul" wx:if="{{dataInfo.status>=3}}">
     <view class="lv-btn-flex">
       <view>办结：</view>
     </view>
-    <view class="lv_text-indent">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view>
+    <view class="lv_text-indent">事件描述：{{dataInfo.wanjie_contents}}</view>
   </view>
 </view>
 <!-- 五星评分 -->
-<view class="pingfen" style="border-bottom: 80rpx solid #f0f0f0">
+<view class="pingfen" style="border-bottom: 80rpx solid #f0f0f0" wx:if="{{dataInfo.status>=3}}">
   <view>评价：</view>
   <view class="xingxing-flex">
     <view>
@@ -65,7 +68,6 @@
       <view class='process_line' ></view>
     </view>
     <text class='process_name'>{{item.name}}</text>
-    <text class='process_name'>{{item.year}}</text>
-    <text class='process_name'>{{item.tiem}}</text>
+    <text class='process_name time' wx:if="{{item.time}}">{{item.time}}</text>
   </view>
 </view>

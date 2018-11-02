@@ -76,8 +76,9 @@ Page({
       },
       success: (res) => {  
         if (res.data.code == 1) {
-          this.data.megList.splice(e.currentTarget.dataset.index, 1)
-          this.setData({ 'megList': this.data.megList })
+          // this.data.megList.splice(e.currentTarget.dataset.index, 1)
+          // this.setData({ 'megList': this.data.megList })
+          this.sendRecall(e.currentTarget.dataset.id)
         }else{
           this.data.megList[e.currentTarget.dataset.index].isrecallShow=false
           this.setData({ 'megList': this.data.megList })
@@ -97,8 +98,9 @@ Page({
       success: (res) => {
         console.log(res.data.code == 1)
         if (res.data.code==1){
-          this.data.megList.splice(e.currentTarget.dataset.index, 1)
-          this.setData({ 'megList': this.data.megList })
+          // this.data.megList.splice(e.currentTarget.dataset.index, 1)
+          // this.setData({ 'megList': this.data.megList })
+          this.sendRecall(e.currentTarget.dataset.id)
         }
         this.showToast(res.data.msg)
       }
@@ -111,6 +113,7 @@ Page({
       this.data.megList[index].isrecallShow=true    
       // this.data.megList.splice(e.currentTarget.dataset.index,1)
       this.setData({'megList': this.data.megList})
+      console.log("弹出")
     },1000)
   },
   recallEnd() {
@@ -154,7 +157,7 @@ Page({
     var src=(src.currentTarget.dataset.src)
     this.data.innerAudioContext.src = src
     this.data.innerAudioContext.play();
-    this.data.InnerAudioContext.pause()
+    
     this.data.innerAudioContext.onPlay(() => {
       wx.showToast({
         title: "正在播放",
@@ -308,7 +311,7 @@ Page({
       }
     )
   },
-  sendRecall() {
+  sendRecall(id) {
     var that = this
     wx.sendSocketMessage(
       {
@@ -316,7 +319,7 @@ Page({
           JSON.stringify(
             {
               type: "revocation",
-              id:"266"
+              id: id
             }
           )
       }
@@ -385,21 +388,24 @@ Page({
       
       var data = JSON.parse(e.data)
       console.log(data)
-      if (data.type != 'ping' && app.msgType == "friend" && (app.ids != data.content.openid) && app.openId != data.content.openid){
+      if (data.type != 'ping' && app.msgType == "friend" && (data.content&&app.ids != data.content.openid) && app.openId != data.content.openid){
         return
-      } else if (data.type != 'ping'&&app.msgType != data.content.type){
+      } else if (data.type != 'ping' && data.content&&app.msgType != data.content.type){
         return
       }
-      
+     
       switch (data.type) {
         // 服务端ping客户端
         case 'ping': break;   
         case "getMessage":
-        
-        var a={}
-          a.content = data.content
-          that.setData({ megList: that.data.megList.concat(a) })
-          console.log(this.data.megList)
+          var obj={}
+          obj.content=data.content
+          obj.msgtype = data.content.msgtype
+          obj.id=  data.content.id
+          obj.openid = data.content.openid
+          data.content = data.content
+          that.setData({ megList: that.data.megList.concat(obj) })
+          console.log(that.data.megList)
           that.setData({ scrollTo: "ToBottom" })
           break;
         case "noonline":
@@ -410,6 +416,28 @@ Page({
               icon:"none"
             }
           )
+          break;
+
+        case "revocation":
+          for (var j = 0; j < that.data.megList.length;j++){
+            if (that.data.megList[j].id==data.id){
+              that.data.megList.splice(j, 1)
+              that.setData({ 'megList': that.data.megList })
+              break;
+            }
+          }
+        break;
+
+        case "MP3":
+          var obj = {}
+          obj.content = data.content
+          obj.msgtype = data.content.msgtype
+          obj.id = data.content.id
+          obj.openid = data.content.openid
+          data.content = data.content
+          that.setData({ megList: that.data.megList.concat(obj) })
+          console.log(that.data.megList)
+          that.setData({ scrollTo: "ToBottom" })
           break;   
       }
     })
@@ -424,7 +452,7 @@ Page({
   onLoad: function (options) {
     var that=this
     
-    this.setData({ yhsf: getApp().globalData.userInfo.user_shenfen })//0}) //
+    this.setData({ yhsf: 0 }) // getApp().globalData.userInfo.user_shenfen })//
     this.setData({ innerAudioContext: wx.createInnerAudioContext() })//获取全局音频对象
     this.setData({ recorderManager: wx.getRecorderManager() }) //获取全局录音对象
     this.data.innerAudioContext.onPlay(() => {//监听录音播放

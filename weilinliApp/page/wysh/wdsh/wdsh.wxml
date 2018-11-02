@@ -9,27 +9,19 @@
     </view>
   </view>
   <view class="lv-bordertop">
-    <view class="lv-ul">
+    <view class="lv-ul" wx:for="{{dataList}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="bindViewTapb">
       <view class="lv-btn-flex">
-        <view>诉求人：</view>
-        <button class="lv_btn">已提交</button>
+        <view>诉求人：{{item.name}}</view>
+        <button class="lv_btn">
+          {{item.status==0? "已提交":item.status==1? "受理中":item.status==2? "处理中":item.status==3? "已提交":item.status==4? "已完结":"不详" }}
+        </button>
       </view>
-      <view bindtap="bindViewTapb">
-        <view>联机电话：xxxxxxxxxxx</view>
-        <view class="lv-line">事件地点：武汉市武昌区复兴路26号</view>
-        <view class="lv-line">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view> 
+      <view >
+        <view>联系电话：{{item.tel}}</view>
+        <view class="lv-line">{{item.location}}</view>
+        <view class="lv-line">事件描述：{{item.content}}</view> 
       </view>
     </view>
-    <view class="lv-ul">
-        <view class="lv-btn-flex">
-          <view>诉求人：</view>
-          <button class="lv_btn">已提交</button>
-        </view>
-        <view bindtap="bindViewTapb">
-        <view>联机电话：xxxxxxxxxxx</view>
-        <view class="lv-line">事件地点：武汉市武昌区复兴路26号</view>
-        <view class="lv-line">事件描述：武汉市武昌区复兴路26号武汉市武昌区复兴路26号</view> 
-      </view>
-      </view>
+    
   </view>
 </view>

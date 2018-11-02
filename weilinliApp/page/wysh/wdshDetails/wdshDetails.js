@@ -5,43 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
+    id:"",
     currentTab: 1,
+    dataInfo:"",
     processData: [{
       name: '提交',
-      year: '2018-05-05',
-      tiem: '9:01:22',
+      time: '',
       start: '#fff',
       end: '#EFF3F6',
-      icon: 'https://wechat.tenqent.com/WebImg/wll-img/jindulan.png'
+      icon: 'https://wechat.tenqent.com/WebImg/wll-img/jinduhui.png'
     },
     {
       name: '受理',
-      year: '2018-05-05',
-      tiem: '9:01:22',
+      time: '',
       start: '#EFF3F6',
       end: '#EFF3F6',
-      icon: 'https://wechat.tenqent.com/WebImg/wll-img/jindulan.png'
+      icon: "https://wechat.tenqent.com/WebImg/wll-img/jinduhui.png"//'https://wechat.tenqent.com/WebImg/wll-img/jindulan.png'
     },
     {
       name: '处理',
-      year: '2018-05-05',
-      tiem: '9:01:22',
+      time: '',
       start: '#EFF3F6',
       end: '#EFF3F6',
       icon: 'https://wechat.tenqent.com/WebImg/wll-img/jinduhui.png'
     },
     {
       name: '办结',
-      year: '2018-05-05',
-      tiem: '9:01:22',
+      time: '',
       start: '#EFF3F6',
       end: '#EFF3F6',
       icon: 'https://wechat.tenqent.com/WebImg/wll-img/jinduhui.png'
     },
     {
       name: '评价',
-      year: '2018-05-05',
-      tiem: '9:01:22',
+      time: '',
       start: '#EFF3F6',
       end: '#fff',
       icon: 'https://wechat.tenqent.com/WebImg/wll-img/jinduhui.png'
@@ -63,39 +60,7 @@ Page({
      url: '../../wysh/wdsh/wdsh',
    })
  },
-//  进度条js
-  setPeocessIcon: function () {
-    var index = 0//记录状态为1的最后的位置
-    var processArr = this.data.processData
-    // console.log("progress", this.data.detailData.progress)
-    for (var i = 0; i < this.data.detailData.progress.length; i++) {
-      var item = this.data.detailData.progress[i]
-      processArr[i].name = item.word
-      if (item.state == 1) {
-        index = i
-        processArr[i].icon = "https://wechat.tenqent.com/WebImg/wll-img/jinduhui.png"
-        processArr[i].year = '2018-05-05'
-        processArr[i].tiem = '9:01:22'
-        processArr[i].start = "#45B2FE"
-        processArr[i].end = "#45B2FE"
-      } else {
-        processArr[i].icon = "https://wechat.tenqent.com/WebImg/wll-img/jinduhui.png"
-        processArr[i].year = '2018-05-05'
-        processArr[i].tiem = '9:01:22'
-        processArr[i].start = "#EFF3F6"
-        processArr[i].end = "#EFF3F6"
-      }
-    }
-    processArr[index].icon = "https://wechat.tenqent.com/WebImg/wll-img/jindulan.png"
-    processArr[i].year = '2018-05-05'
-    processArr[i].tiem = '9:01:22'
-    processArr[index].end = "#EFF3F6"
-    processArr[0].start = "#fff"
-    processArr[this.data.detailData.progress.length - 1].end = "#fff"
-    this.setData({
-      processData: processArr
-    })
-  },
+
   // 星星评分
   //用户评分
   in_xin: function (e) {
@@ -109,6 +74,22 @@ Page({
     this.setData({
       one_2: one_2,
       two_2: 5 - one_2
+    })
+    wx.request({
+      method: "POST",
+      url: getApp().globalData.api + 'baoshi/pingjia',
+      data: {
+        id: this.data.id,
+        score: one_2
+      },
+      success: (res) => {
+       
+        wx.showToast({
+          title:res.data.msg,
+          duration: 1500
+        })
+
+      }
     })
   },
   //滑动切换
@@ -133,7 +114,46 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.data.id = options.id
+    wx.showToast({
+      icon: "loading",
+      mask: true,
+      duration: 15000
+    })
+    wx.request({
+      method: "POST",
+      url: getApp().globalData.api + 'baoshi/details',
+      data: {
+        id: options.id
+      },
+      success: (res) => {
+        wx.hideToast()
+        if (res.data.code == 1) {
+          this.setData({ "dataInfo": res.data.data })
+          this.setData({
+            one_2: this.data.dataInfo.score,
+            two_2: 5 - this.data.dataInfo.score
+          })
+          
+          for (var i = 0; i <= this.data.dataInfo.status;i++){
+            this.data.processData[i].icon = 'https://wechat.tenqent.com/WebImg/wll-img/jindulan.png'
+          }
+          this.data.processData[0].time = this.data.dataInfo.shouli_time
+          this.data.processData[1].time = this.data.dataInfo.shouli_time
+          this.data.processData[2].time = this.data.dataInfo.chuli_time
+          this.data.processData[3].time = this.data.dataInfo.wanjie_time
+          this.data.processData[4].time = this.data.dataInfo.pingjia_time
+          this.setData({ "processData": this.data.processData })
+        } else {
+          wx.showToast({
+            icon: "none",
+            mask: true,
+            duration: 1500
+          })
+        }
+
+      }
+    })
   },
 
   /**

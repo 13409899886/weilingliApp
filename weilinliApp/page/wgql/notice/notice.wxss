@@ -67,12 +67,13 @@ view{
     font-weight: 400;
     font-size: 17px;
     width: auto;
-    overflow: hidden;
+    /* overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: normal;
     word-wrap: break-word;
-    word-break: break-all;
+    word-break: break-all; */
+    margin-bottom: 30rpx
 }
 .weui-media-box__desc {
     color: #808080;
@@ -102,6 +103,7 @@ view{
     padding: 15px;
     position: relative;
 }
+
 .weui-media-box_appmsg {
     display: -webkit-box;
     display: -webkit-flex;

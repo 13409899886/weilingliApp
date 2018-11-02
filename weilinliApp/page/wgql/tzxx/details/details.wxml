@@ -1,0 +1,7 @@
+<!--page/wgql/tzxx/details/details.wxml-->
+
+<view style='padding:0 15px'>
+  <view class='title'>{{noticeDetails.title}}</view>
+  <view class='time'>{{noticeDetails.create_time}}</view>
+  <rich-text class='content'  nodes=" {{noticeDetails.content}}" ></rich-text>
+</view>

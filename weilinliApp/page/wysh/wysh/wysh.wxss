@@ -8,7 +8,6 @@
 .wysh-view{
   padding: 30rpx;
   justify-content: space-between;
-  border-top:30rpx solid #f0f0f0 
 }
 .wysh_text{
   width: 170rpx;
@@ -45,7 +44,9 @@
 .lv__inputstyle-box{
   display: -webkit-flex;
   flex-wrap: wrap;
-  padding:  30rpx 0 30rpx 18rpx
+  padding:  30rpx 0 30rpx 18rpx;
+  background-repeat: no-repeat;
+  background-size: cover
 }
 .lv__input{
   position: relative;
@@ -73,4 +74,7 @@
   width:690rpx;
   color:#fff;
   background-image:-webkit-linear-gradient(top,rgb(81,231,118),rgb(57,195,79));
+}
+image.lv__input-box::before,image.lv__input-box::after{
+  display: none
 }

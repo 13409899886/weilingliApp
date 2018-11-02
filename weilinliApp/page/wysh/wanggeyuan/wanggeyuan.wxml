@@ -1,0 +1,107 @@
+<!--page/wysh/wanggeyuan/wanggeyuan.wxml-->
+<view class='cl-box'>
+  <view class="weui-panel">
+      <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+              <view class="weui-cells">
+                  <view class="weui-cell weui-cell_access" href="javascript:;">
+                      <view class="weui-cell__hd"></view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          诉求人
+                      </view>
+                      <view>{{dataInfo.name}}</view>
+                      <!-- <text class="weui-cell__ft">{{info.wg_name}}</text> -->
+                  </view>
+                  <view class="weui-cell weui-cell_access" href="javascript:;">
+                      <view class="weui-cell__hd"></view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          联系方式
+                      </view>
+                      <view>{{dataInfo.tel}}</view>
+                      <!-- <text class="weui-cell__ft">{{info.wg_name}}</text> -->
+                  </view>
+                  <view class="weui-cell weui-cell_access" href="javascript:;">
+                      <view class="weui-cell__hd"></view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          发布时间
+                      </view>
+                      <view>{{dataInfo.shangbao_time}}</view>
+                      <!-- <text class="weui-cell__ft">{{info.wg_name}}</text> -->
+                  </view>
+                  <view class="weui-cell wg-content" href="javascript:;">
+                      <view class="weui-cell__hd">内容:</view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          {{dataInfo.content}}
+                      </view>
+                  </view>
+                  <view class="weui-cell wg-content" href="javascript:;" wx:if="{{dataInfo.status==1&&dataInfo.type==1}}">
+                      <view class="weui-cell__hd">回复:</view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          <textarea bindblur="" auto-height placeholder="自动变高" />
+                      </view>
+                  </view>
+                  <view class="weui-cell wg-content" href="javascript:;" wx:if="{{dataInfo.chuli_contents}}">
+                      <view class="weui-cell__hd">回复内容:</view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          {{dataInfo.chuli_contents}}
+                      </view>
+                  </view>
+              </view>
+          </view>
+      </view>
+  </view>
+  <view class="weui-panel" wx:if="{{dataInfo.type==0}}">
+      <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+              <view class="weui-cells">
+                  <view class="section">
+                      <view class="section__title">选择分类</view>
+                      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{objectMultiArray}}" range-key="name">
+                        <view class="picker">
+                          {{objectMultiArray[0][multiIndex[0]].name}}/{{objectMultiArray[1][multiIndex[1]].name}}
+                        </view>
+                      </picker>
+                  </view>
+              </view>
+          </view>
+      </view>
+  </view>
+  <view class="weui-panel switch" wx:if="{{dataInfo.status==1&&dataInfo.type==1&&dataInfo.is_shangbao==0}}">
+      <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+              <view class="weui-cells">
+                  <view class="weui-cell weui-cell_access" href="javascript:;">
+                      <view class="weui-cell__hd"></view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          是否公开
+                      </view>
+                      <view><switch bindchange="switch2Change"/></view>
+                  </view>
+                  <view class="weui-cell weui-cell_access" href="javascript:;">
+                      <view class="weui-cell__hd"></view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          他人帮助
+                      </view>
+                      <view><switch bindchange="switch2Change"/></view>
+                  </view>
+                  <view class="weui-cell weui-cell_access" href="javascript:;">
+                      <view class="weui-cell__hd"></view>
+                      <view class="weui-cell__bd weui-cell_primary">
+                          是否补充
+                      </view>
+                      <view><switch bindchange="switch2Change"/></view>
+                  </view>
+              </view>
+          </view>
+      </view>
+  </view>
+  <view style='padding:15px;  margin-top: 10px'>
+    <button bindtap="" type="primary"  wx:if="{{dataInfo.type==0}}">提交审核</button>
+    <button bindtap="" type="primary" wx:if="{{dataInfo.status==2}}">办结</button>
+    <button bindtap="" type="primary" wx:if="{{dataInfo.status==1&&dataInfo.type==1&&dataInfo.is_shangbao==0}}">回复</button>
+    <button bindtap="default" wx:if="{{dataInfo.is_shangbao==0&&dataInfo.status==1}}">上报</button>
+  </view>
+  <view class='subTag' wx:if="{{dataInfo.is_shangbao==1}}">事件已上报</view>
+  <view class='subTag' wx:if="{{dataInfo.status==3}}">事件已办结</view>
+</view>
+

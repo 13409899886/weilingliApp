@@ -8,6 +8,28 @@ Page({
     info:null,//页面初始化数据
     wgbm:"",//网格编码
   },
+  showCode(){
+    
+    wx.showLoading()
+    wx.request({
+      method: "POST",
+      url: getApp().globalData.api + 'qrcode/index',
+      data: {
+        scene: getApp().globalData.wangge_id,//用户的网格编码"420102001001001"//
+        page: "page/Verification/loding/loding",
+        is_wg:2
+      },
+      success: (res) => {
+        wx.hideLoading()
+        this.setData({ codeSrc: res.data.data })
+      }
+    })
+    this.setData({ maskShow: true})
+  },
+  maskHide(){
+    
+    this.setData({ maskShow: false })
+  },
   toMsg(e) {
     console.log(e)
     if (e.currentTarget.dataset.is_siliao==0){//判断是否接受私聊

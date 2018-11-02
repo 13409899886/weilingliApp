@@ -3,6 +3,7 @@
   <view class='userList'>
     <view class='obj' 
     wx:for="{{info.users}}" 
+    wx:key="index"
     wx-if="{{item.wgbm==wgbm||wgbm==''}}" 
     bindtap='toMsg' 
     data-to_uid="{{item.openid}}"
@@ -39,23 +40,24 @@
                       <text class="weui-cell__ft">{{info.wg_name}}</text>
                   </view>
 
-                  <view class="weui-cell weui-cell_access" href="javascript:;">
+                  <view class="weui-cell weui-cell_access" 
+                    bindtap="showCode">
                       <view class="weui-cell__hd"></view>
                       <view class="weui-cell__bd weui-cell_primary">
                           <p>群二维码</p>
                       </view>
                       <text class="weui-cell__ft"></text>
                   </view>
-                  
-                  <view class="weui-cell weui-cell_access notice" href="javascript:;">
-                      <view class="weui-cell__hd"></view>
-                      <view class="weui-cell__bd weui-cell_primary">
-                          <view>群公告</view>
-                          <view class='noticeDetail'>{{info.gonggao.content}}</view>
-                      </view>
-                      
-                  </view>
-
+                  <navigator open-type="redirect" url  ="../notice/notice" >
+                    <view class="weui-cell weui-cell_access notice" href="javascript:;">
+                        <view class="weui-cell__hd"></view>
+                        <view class="weui-cell__bd weui-cell_primary">
+                            <view>群公告</view>
+                            <view class='noticeDetail'>{{info.gonggao.content}}</view>
+                        </view>
+                        
+                    </view>
+                  </navigator>
                   
               </view>
           </view>
@@ -83,9 +85,14 @@
                       </view>
                       <text class="weui-cell__ft">{{info.user_name}}</text>
                   </view>
-                  
               </view>
           </view>
       </view>
+  </view>
+  <view
+  wx:if="{{maskShow}}" 
+  class="weui-mask"
+  bindtap='maskHide'>
+    <image mode="widthFix" class='codePic' src='{{codeSrc}}'></image> 
   </view>
 </view>

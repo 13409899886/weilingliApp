@@ -1,4 +1,4 @@
-<!--page/wxy/wxyAuditor/wxyAuditor.wxml-->
+<!--消息列表-->
 <view class='box' >
 
   <view  class="weui-media-box weui-media-box_appmsg" wx:for="{{list.friend}}" wx:key="{{index}}"  data-val="{{item}}" data-title="{{item.name}}"  catchtap='toMsg'>
